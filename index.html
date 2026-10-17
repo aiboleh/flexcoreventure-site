@@ -457,6 +457,9 @@ footer .soc{margin-top:14px}
 .cform input,.cform textarea{background:rgba(3,20,40,.6)}
 .hero{padding-top:calc(clamp(100px,12vh,124px))}
 .cur{mix-blend-mode:normal;background:#fff;opacity:.85}
+main{position:relative;isolation:isolate}
+#fx{position:absolute;top:0;left:0;right:0;width:100%;height:100vh;z-index:-1;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}
+.hero::after{display:none}
 </style>
 </head>
 <body>
@@ -466,8 +469,8 @@ footer .soc{margin-top:14px}
   <nav aria-label="Main" data-i18a="aria-label" data-en-aria-label="Main" data-ms-aria-label="Utama"><a class="l" href="#portfolio"><span lang="en">Portfolio</span><span lang="ms">Portfolio</span></a><a class="l" href="#journey"><span lang="en">Journey</span><span lang="ms">Perjalanan</span></a><a class="l" href="#team"><span lang="en">Team</span><span lang="ms">Pasukan</span></a><a class="l" href="#faq"><span lang="en">FAQ</span><span lang="ms">Soalan</span></a><a class="btn pri mag" href="#contact"><span lang="en">Let's connect</span><span lang="ms">Hubungi kami</span></a><div class="lang" role="group" aria-label="Language / Bahasa"><button type="button" data-l="ms" aria-pressed="false">BM</button><button type="button" data-l="en" aria-pressed="true">EN</button></div></nav>
 </div></header>
 <main>
+<canvas id="fx" aria-hidden="true"></canvas>
 <section class="hero" id="top">
-  <canvas id="fx" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="hero-top"><div>
       <span class="eb rev"><i></i><span lang="en">Venture company · Malaysia · Since 2023</span><span lang="ms">Syarikat usaha niaga · Malaysia · Sejak 2023</span></span>
@@ -774,8 +777,74 @@ const T=(en,ms)=>window.AIBLang?AIBLang.t(en,ms):en;
 const TITLE=['Flexcore Venture | Empowering Visionaries, Fuelling Growth','Flexcore Venture | Memperkasa Insan Berwawasan, Memacu Pertumbuhan'];
 document.title=T(TITLE[0],TITLE[1]);
 
-/* ---------- background: a slow venture network (nodes + links) on deep navy, not the aiboleh ribbons ---------- */
-(function(){
+/* ---------- background options (WebGL2, half resolution, 30fps): ?bg=1 contour map, ?bg=2 dot-field wave, ?bg=3 rising light;
+   ?bg=0 = the old node network. window.FV_BG sets the default. ---------- */
+/* the background canvas runs from the top of the page to just past the mission heading */
+(function(){const c=$('#fx'),h=$('#mv-h');if(!c||!h)return;const fit=()=>{const m=c.parentElement.getBoundingClientRect(),r=h.getBoundingClientRect();c.style.height=Math.round(r.bottom-m.top+140)+'px';};
+  fit();addEventListener('resize',fit);addEventListener('load',fit);document.fonts&&document.fonts.ready.then(fit);addEventListener('langchange',fit);})();
+const BG=(()=>{const q=new URLSearchParams(location.search).get('bg');return q!==null?+q:(window.FV_BG??3);})();
+if(BG>0&&(function(){
+  const c=$('#fx'); if(!c) return false; const gl=c.getContext('webgl2',{antialias:false,alpha:false,powerPreference:'low-power'}); if(!gl) return false;
+  const VS=`#version 300 es
+in vec2 p;void main(){gl_Position=vec4(p,0,1);}`;
+  const COMMON=`#version 300 es
+precision highp float;uniform vec2 R;uniform float T;uniform vec2 M;out vec4 o;
+const vec3 NAVY=vec3(.016,.102,.192),BLUE=vec3(0.,.494,.776),SKY=vec3(.62,.84,1.);
+float h21(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
+float vn(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h21(i),h21(i+vec2(1,0)),f.x),mix(h21(i+vec2(0,1)),h21(i+1.),f.x),f.y);}
+float fbm(vec2 p){float s=0.,a=.5;for(int i=0;i<5;i++){s+=a*vn(p);p=mat2(1.6,1.2,-1.2,1.6)*p;a*=.5;}return s;}
+vec3 base(vec2 uv){vec2 g=uv-vec2(.72,.7);float d=length(g*vec2(R.x/R.y,1.));return NAVY+BLUE*.34*exp(-d*d*2.2)+BLUE*.06*(1.-uv.y);}
+`;
+  const FS={
+  /* 1 · contour map: slow drifting topographic lines, the pointer lifts a ridge */
+  1:`void main(){vec2 uv=gl_FragCoord.xy/R,p=(gl_FragCoord.xy-.5*R)/R.y;
+    vec2 m=(M-.5*R)/R.y;float bump=.35*exp(-dot(p-m,p-m)*14.);
+    float h=(fbm(p*1.35+vec2(T*.018,-T*.012))+.25*fbm(p*3.1-vec2(T*.01,0.))+bump)*14.;
+    float w=fwidth(h);
+    float f=abs(fract(h)-.5);float line=1.-smoothstep(.5-w*1.6,.5,f);
+    float mj=abs(fract(h/5.)-.5);float major=1.-smoothstep(.5-w*.34,.5,mj);
+    vec3 c=base(uv);float fade=.55+.45*smoothstep(0.,1.,uv.x);
+    c+=SKY*(line*.10+major*.20)*fade+SKY*bump*line*.5;
+    o=vec4(c,1);}`,
+  /* 2 · dot field: a perspective plane of dots with slow swells rolling toward you */
+  2:`void main(){vec2 uv=gl_FragCoord.xy/R;vec2 p=(gl_FragCoord.xy-.5*R)/R.y;vec3 c=base(uv);
+    float hz=.62;float y=hz-p.y; if(y>0.){float z=.9/y;vec2 q=vec2(p.x*z,z+T*.35);
+      float wv=sin(q.x*.55+T*.5)*.5+sin(q.y*.42-T*.3)*.5+.6*fbm(q*.18+T*.03);
+      vec2 g=q*1.6;vec2 cell=fract(g)-.5;vec2 fw=max(fwidth(g),vec2(1e-4));float d=length(cell/fw);float rp=clamp(.13/max(fw.x,fw.y),.7,3.2);
+      float dot_=1.-smoothstep(rp-.7,rp+.7,d);
+      vec2 m=(M-.5*R)/R.y;float near=exp(-dot(p-m,p-m)*10.);
+      float b=(.25+.75*smoothstep(-.2,1.,wv))*smoothstep(28.,3.,z)*smoothstep(.0,.05,y);
+      c+=mix(SKY,vec3(1.),near)*dot_*b*(.42+.6*near);}
+    c+=BLUE*.12*exp(-abs(p.y-hz)*14.);o=vec4(c,1);}`,
+  /* 3 · rising light: thin columns of light drift upward like capital flowing into growth */
+  3:`void main(){vec2 uv=gl_FragCoord.xy/R;vec3 c=base(uv);float a=R.x/R.y;
+    for(int k=0;k<3;k++){float n=float(k);float cols=38.+n*26.;float x=uv.x*cols;float id=floor(x);float r=h21(vec2(id,n*7.1));
+      float sp=.035+.06*r;float len=.18+.28*h21(vec2(id,n+3.));float y=fract(uv.y*.6-T*sp-r*7.);
+      float streak=smoothstep(0.,len,y)*smoothstep(len+.02,len,y)*step(.55,h21(vec2(id,n+9.)));
+      float lx=abs(fract(x)-.5);float lw=fwidth(x);float line=1.-smoothstep(lw*.6,lw*1.8,lx);
+      c+=SKY*line*streak*(.55-n*.13)*(.6+.4*uv.x);
+      c+=SKY*line*.018*(1.-n*.3);}
+    vec2 m=M/R;float near=exp(-dot((uv-m)*vec2(a,1.),(uv-m)*vec2(a,1.))*9.);c+=BLUE*near*.18;
+    o=vec4(c,1);}`};
+  const sh=(t,s)=>{const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.warn(gl.getShaderInfoLog(o));return null;}return o;};
+  const v=sh(gl.VERTEX_SHADER,VS),f=sh(gl.FRAGMENT_SHADER,COMMON+(FS[BG]||FS[1]));if(!v||!f)return false;
+  const pr=gl.createProgram();gl.attachShader(pr,v);gl.attachShader(pr,f);gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return false;gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  const lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+  const uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T'),uM=gl.getUniformLocation(pr,'M');
+  const S=Math.min(devicePixelRatio||1,1.5)*.6;let W=0,H=0,mx=-1e4,my=-1e4,tx=mx,ty=my,vis=true;
+  function size(){W=Math.max(2,c.clientWidth*S|0);H=Math.max(2,c.clientHeight*S|0);c.width=W;c.height=H;gl.viewport(0,0,W,H);}
+  size();new ResizeObserver(size).observe(c);
+  addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();tx=(e.clientX-r.left)*S;ty=H-(e.clientY-r.top)*S;if(mx<-1e3){mx=tx;my=ty;}});
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting;}).observe(c);
+  const t0=performance.now();
+  function draw(now){mx+=(tx-mx)*.08;my+=(ty-my)*.08;gl.uniform2f(uR,W,H);gl.uniform1f(uT,(now-t0)/1000);gl.uniform2f(uM,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);}
+  if(RM||window.AIB_LITE){draw(t0+20000);addEventListener('resize',()=>draw(t0+20000));return true;}
+  let last=0;(function f(now){if(window.AIB_LITE)return;requestAnimationFrame(f);if(vis&&!document.hidden&&now-last>=32){last=now;draw(now);}})(0);
+  return true;
+})());
+/* ---------- background 0: a slow venture network (nodes + links) on deep navy ---------- */
+else (function(){
   const c=$('#fx'); if(!c) return; const x=c.getContext('2d'); if(!x) return;
   let W=0,H=0,P=[],mx=-1e4,my=-1e4,vis=true;const D=Math.min(devicePixelRatio||1,2);
   function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*D|0;c.height=H*D|0;x.setTransform(D,0,0,D,0,0);
