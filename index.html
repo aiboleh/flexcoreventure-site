@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Flexcore Venture | Empowering Visionaries, Fuelling Growth</title>
+<meta name="description" content="Flexcore Venture is a Malaysian venture company founded in 2023. We back real businesses in fintech, food, property, esports and AI, including CHIP IN, The Komunal Cafe, Team Vamos, A.I. Boleh and Tuah Land.">
+<link rel="canonical" href="https://www.flexcoreventure.com/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://www.flexcoreventure.com/"><meta property="og:title" content="Flexcore Venture | Empowering Visionaries, Fuelling Growth">
+<meta property="og:description" content="Flexcore Venture is a Malaysian venture company founded in 2023. We back real businesses in fintech, food, property, esports and AI, including CHIP IN, The Komunal Cafe, Team Vamos, A.I. Boleh and Tuah Land."><meta property="og:image" content="https://www.flexcoreventure.com/assets/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0067A6">
+<link rel="icon" type="image/png" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Flexcore Venture", "legalName": "Flexcore Venture Sdn. Bhd.", "url": "https://www.flexcoreventure.com/", "logo": "https://www.flexcoreventure.com/assets/logos/fv-logo-full-dark.png", "email": "flexcoreventure@gmail.com", "foundingDate": "2023", "sameAs": ["https://www.instagram.com/flexcoreventure/", "https://x.com/flexcoreventure", "https://www.facebook.com/profile.php?id=61561341516864"]}</script>
+<script>window.AIB_LANG_DEFAULT='en';(function(){var d=document.documentElement,l=null;try{l=new URLSearchParams(location.search).get('lang');}catch(e){}if(l!=='ms'&&l!=='en'){try{l=localStorage.getItem('aib-lang');}catch(e){}}if(l!=='ms'&&l!=='en')l=window.AIB_LANG_DEFAULT||'en';d.dataset.lang=l;d.lang=l;})();</script>
+<style>
+/* Layout: two product destinations, not a building. Hero = headline + verified proof + two live "doors"
+   (Video Studio plays WABAK: Infection, Virtual Office plays ZV2's 3D office). Then a portfolio reel of our real films
+   with a theatre view, a hands-on "give the office a job" demo, and a roadmap of what is live, waiting and next.
+   Tokens from ZharifV2's Virtual Office welcome look (single dark theme). */
+:root{
+  --bg:#0067A6; --bg2:#005C96; --ink:#FFFFFF; --ink2:rgba(255,255,255,.72); --ink3:rgba(255,255,255,.50); --ink4:rgba(255,255,255,.24);
+  --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.06);
+  --warm:#BFE6FF; --warm2:#FFFFFF; --cool:#78B6FF; --ghost:#8CC4FF; --teal:#4FD1BD; --live:#5DE3A1;
+  --glass:linear-gradient(180deg,rgba(0,74,126,.62),rgba(0,52,96,.80));
+  --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1); --expo:cubic-bezier(.16,1,.3,1);
+  --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:72px;
+  --sec:clamp(88px,10vw,150px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+img,video{max-width:100%;display:block}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:clamp(16px,3vw,32px)}
+.eb{display:inline-flex;align-items:center;gap:10px;font:600 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.eb i{width:6px;height:6px;border-radius:50%;background:var(--c,var(--warm));box-shadow:0 0 12px var(--c,var(--warm))}
+.warm-em{font-style:italic;background:linear-gradient(100deg,#FFFFFF 0%,#BFE6FF 45%,#9AD8FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .14em .28em 0;margin:0 -.06em -.28em 0}   /* the gradient only paints inside this box: room for italic tails, or the g of 'pandang' vanishes */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.06em .16em .3em .04em;margin:-.06em -.16em -.3em -.04em}   /* room for italic tails (g, p, y) and the italic lean: Zharif saw the g of 'pandang' cut, 16 Oct */
+.w>span{display:inline-block}
+.demo{display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:999px;border:1px solid rgba(220,240,255,.5);background:rgba(191,230,255,.10);font:700 9.5px/1 var(--sans);letter-spacing:.14em;color:var(--warm2)}
+.mock{position:fixed;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:80;font:700 10px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--warm2);background:rgba(16,19,27,.85);border:1px solid rgba(220,240,255,.35);padding:9px 12px;border-radius:999px;backdrop-filter:blur(12px);pointer-events:none}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:16px;font:600 14px/1 var(--sans);cursor:pointer;transition:box-shadow .4s var(--ease),background .3s,opacity .3s;will-change:transform}
+.btn.pri{background:linear-gradient(180deg,#FFFFFF,#DDF1FF);color:#005C96;box-shadow:0 14px 34px -12px rgba(0,40,80,.7),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn.pri:hover{box-shadow:0 18px 44px -10px rgba(0,40,80,.9),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn.sec{background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--ink);backdrop-filter:blur(10px)}
+.btn.sec:hover{background:rgba(255,255,255,.09)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn .arr{transition:transform .4s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+:focus-visible{outline:2px solid var(--warm2);outline-offset:3px;border-radius:8px}
+h2{font:300 clamp(40px,5.2vw,78px)/1.02 var(--serif);letter-spacing:-.03em;margin:18px 0 18px;text-wrap:balance}
+.lead{color:var(--ink2);font-size:clamp(15.5px,1.2vw,17.5px);max-width:52ch;margin:0}
+.src{font-size:12px;color:var(--ink3)}
+.src a{text-decoration:underline;text-underline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;padding-top:env(safe-area-inset-top,0px);transition:background .5s,border-color .5s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(0,88,145,.7);backdrop-filter:blur(18px) saturate(150%);border-color:var(--line2)}
+/* ---------- site bar: the three A.I. Boleh sites, one tap away on every page ----------
+   Zharif, 16 Oct: "on the menu tab pls add Main Page, Video Studio and Virtual Office, so that people know where to
+   click back to the video studio / main page when they explore the sub pages". It sits above the menu row, stays
+   visible while scrolling, and lights up the site you are in. Colours come from the page (--sb-* hooks).
+   Also here: the mobile Menu button + drop-down (Video Studio and its sub-pages). */
+.nav .sitebar{position:relative;z-index:2;border-bottom:1px solid var(--line);background:var(--sb-bg,rgba(0,0,0,.42));backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%)}
+.nav .sitebar>.wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:36px}
+.nav .sites{display:flex;align-items:center;gap:2px;margin:0 0 0 -11px;font:600 12.5px/1 var(--sans);letter-spacing:.02em;color:var(--ink3)}
+.nav .sites a{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 11px;border-radius:999px;color:var(--ink3);white-space:nowrap;transition:color .3s,background .3s,box-shadow .3s}
+.nav .sites a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.nav .sites a.on{color:var(--ink);background:var(--sb-on,rgba(255,255,255,.09));box-shadow:inset 0 0 0 1px var(--sb-ring,rgba(255,255,255,.16))}
+.nav .sites a.on::before{content:"";width:6px;height:6px;border-radius:50%;flex:none;background:var(--sb-dot,var(--ink));box-shadow:0 0 10px var(--sb-dot,var(--ink))}
+.nav .sb-x{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink3);white-space:nowrap}
+.nav .sb-x a{color:var(--sb-link,var(--ink));font-weight:600}
+@media(max-width:900px){.nav .sb-x{display:none}.nav .sitebar>.wrap{justify-content:center}.nav .sites{margin:0}}
+@media(max-width:390px){.nav .sites{font-size:11.5px}.nav .sites a{padding:0 8px;gap:5px}}
+@media(max-width:340px){.nav .sites a.on::before{display:none}.nav .sites a{padding:0 6px}}
+
+.menu-btn{display:none;align-items:center;gap:9px;height:42px;padding:0 15px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font:700 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+.menu-btn i{position:relative;display:block;width:16px;height:10px;flex:none}
+.menu-btn i::before,.menu-btn i::after{content:"";position:absolute;left:0;right:0;height:2px;border-radius:2px;background:currentColor;transition:transform .45s var(--expo,ease),top .45s var(--expo,ease)}
+.menu-btn i::before{top:0}.menu-btn i::after{top:8px}
+.menu-btn[aria-expanded="true"] i::before{top:4px;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] i::after{top:4px;transform:rotate(-45deg)}
+.mmenu{display:grid;padding:6px clamp(16px,3vw,32px) 18px;background:rgba(10,9,8,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line);max-height:calc(100svh - 110px);overflow:auto}
+.mmenu a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 2px;border-bottom:1px solid var(--line);font:600 17px/1.2 var(--sans);color:var(--ink)}
+.mmenu a::after{content:"\2192";color:var(--accent,#8FD3FF)}
+.mmenu a.on{color:var(--gold,#CFEBFF)}
+.mmenu a.buy{margin-top:12px;justify-content:center;border:0;border-radius:999px;min-height:52px;background:linear-gradient(180deg,#8FD3FF,#8FD3FF);color:#00395F;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.mmenu a.buy::after{content:none}
+@media(max-width:900px){.menu-btn{display:inline-flex}}
+@media(max-width:400px){.menu-btn{padding:0 12px}.menu-btn b{display:none}}
+@media(min-width:901px){.mmenu{display:none!important}}
+.nav{--sb-bg:rgba(0,88,145,.55);--sb-on:rgba(191,230,255,.14);--sb-ring:rgba(191,230,255,.45);--sb-dot:var(--warm);--sb-link:var(--warm2)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font:600 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.brand i{width:8px;height:8px;border-radius:50%;background:var(--warm);box-shadow:0 0 14px var(--warm)}
+.nav nav{margin-left:auto;display:flex;align-items:center;gap:26px;font-size:14px;color:var(--ink2)}
+.nav nav a.l{position:relative;padding:6px 0}
+.nav nav a.l::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--warm2);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav nav a.l:hover{color:var(--ink)}.nav nav a.l:hover::after,.nav nav a.l.on::after{transform:scaleX(1);transform-origin:left}
+.nav nav a.l.on{color:var(--ink)}
+.nav .btn{min-height:40px;padding:0 16px;border-radius:13px;font-size:13px}
+@media(max-width:860px){.nav nav a.l{display:none}}
+/* BM/EN switch (shared styles from src/i18n.css, themed here) */
+/* BM/EN: show one language. Toggle order is BM | EN. Pages set --lang-* to match their theme. */
+html[data-lang="en"] [lang="ms"],html[data-lang="ms"] [lang="en"]{display:none!important}
+.lang{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;align-items:center;padding:3px;border-radius:999px;border:1px solid var(--lang-line,rgba(255,255,255,.16));background:var(--lang-bg,rgba(255,255,255,.05));flex:none;isolation:isolate}
+.lang::before{content:"";position:absolute;z-index:-1;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:999px;background:var(--lang-knob,#fff);box-shadow:0 4px 14px -4px var(--lang-glow,rgba(0,0,0,.5));transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.lang[data-on="en"]::before{transform:translateX(100%)}
+.lang button{position:relative;min-width:38px;min-height:34px;padding:0 9px;border:0;border-radius:999px;background:none;font:700 11px/1 var(--lang-font,inherit);letter-spacing:.14em;color:var(--lang-ink,rgba(255,255,255,.72));cursor:pointer;transition:color .3s}
+.lang button[aria-pressed="true"]{color:var(--lang-on,#111)}
+.lang button:hover{color:var(--lang-hover,#fff)}.lang button[aria-pressed="true"]:hover{color:var(--lang-on,#111)}
+.lang button:focus-visible{outline:2px solid var(--lang-focus,currentColor);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.lang::before{transition:none}}
+.nav .lang{--lang-knob:linear-gradient(135deg,#FFFFFF,#BFE6FF);--lang-on:#005C96;--lang-ink:var(--ink2);--lang-hover:var(--ink);--lang-line:rgba(255,255,255,.16);--lang-glow:rgba(191,230,255,.55);--lang-focus:var(--warm2);--lang-font:var(--sans)}
+/* phones: logo, CTA and the switch share one row; the Malay CTA gets its short form, the tiniest screens drop the CTA */
+.nav .cta-short{display:none}
+@media(max-width:480px){.nav .wrap{gap:12px}.nav nav{gap:10px}}
+@media(max-width:419px){.nav .cta-full{display:none}.nav .cta-short{display:inline}}
+@media(max-width:340px){.nav nav .btn{display:none}}
+
+/* hero */
+.hero{position:relative;padding:calc(clamp(100px,12vh,124px) + 36px) 0 clamp(8px,1.5vw,20px);display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;isolation:isolate}
+#fx{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero>.wrap{width:100%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(120% 80% at 50% 10%,transparent 35%,var(--bg) 100%)}
+.hero-top{display:grid;grid-template-columns:1fr;gap:clamp(18px,2.4vh,30px)}
+.hero h1{font:300 clamp(40px,5.4vw,104px)/.98 var(--serif);letter-spacing:-.035em;margin:18px 0 0}
+.hero h1 .l2{display:block}
+.hero h1 .nw{white-space:nowrap}
+.proof{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:var(--s3) var(--s5);align-items:end}
+.proof .src{grid-column:1/-1}
+.proof p{margin:0;color:var(--ink2);font-size:clamp(15px,1.15vw,17px);max-width:36ch}
+.proof p b{color:var(--ink);font-weight:600}
+.pstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2)}
+.pstat{padding:14px 14px 12px;border-radius:18px;border:1px solid var(--line);background:rgba(0,58,104,.55);backdrop-filter:blur(12px)}
+.pstat b{display:block;font:300 clamp(24px,2vw,32px)/1 var(--sans);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.pstat span{display:block;margin-top:6px;font-size:11.5px;color:var(--ink3);line-height:1.35}
+@media(max-width:900px){.proof{grid-template-columns:1fr}}
+.doors{display:flex;gap:var(--s3);height:clamp(320px,46vh,640px);margin-top:clamp(28px,4vh,48px)}
+.door{position:relative;flex:1 1 0;min-width:0;border-radius:30px;overflow:hidden;border:1px solid var(--line);background:#00578F;transition:flex-grow 1s var(--expo),border-color .5s;box-shadow:0 40px 100px -40px rgba(0,0,0,.9)}
+@media(hover:hover) and (min-width:761px){.doors:hover .door{flex-grow:.8}.doors .door:hover,.doors .door:focus-within{flex-grow:1.4;border-color:rgba(220,240,255,.35)}}
+.door video,.door img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.4s var(--expo),filter .8s}
+.door:hover video{transform:scale(1.01)}
+@media(hover:hover){.doors:hover .door:not(:hover) video{filter:saturate(.6) brightness(.6)}}
+.door::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,88,145,.15) 0%,rgba(0,88,145,0) 30%,rgba(0,88,145,.05) 50%,rgba(0,88,145,.9));pointer-events:none}
+.door .hit{position:absolute;inset:0;z-index:3}
+.door .lab{position:absolute;left:24px;right:24px;bottom:22px;z-index:4;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:14px;pointer-events:none}
+.door .lab a{pointer-events:auto}
+.door .k{font:600 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.door b{display:block;font:300 clamp(32px,3.4vw,52px)/1 var(--serif);letter-spacing:-.02em;margin:10px 0 8px}
+.door small{display:block;font-size:13.5px;color:var(--ink2);max-width:36ch}
+.st{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 12px;border-radius:999px;background:rgba(10,13,20,.62);border:1px solid var(--line);backdrop-filter:blur(10px);font:600 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.st i{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 0 3px rgba(93,227,161,.16)}
+.st.soon i{background:var(--warm);box-shadow:0 0 0 3px rgba(191,230,255,.18)}
+.now{position:absolute;top:18px;left:18px;z-index:4;display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 12px;border-radius:999px;background:rgba(10,13,20,.6);border:1px solid var(--line);backdrop-filter:blur(10px);font-size:12px;color:var(--ink2)}
+.now i{width:6px;height:6px;border-radius:50%;background:#FF5A4D;box-shadow:0 0 10px #FF5A4D;animation:rec 1.6s ease-in-out infinite}
+@keyframes rec{50%{opacity:.3}}
+.door .go{position:absolute;top:16px;right:16px;z-index:4;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(10,13,20,.5);border:1px solid var(--line);backdrop-filter:blur(10px);transition:transform .6s var(--expo),background .4s,color .4s;pointer-events:none}
+.door:hover .go{transform:rotate(-45deg);background:rgba(191,230,255,.95);color:#005C96}
+@media(max-width:760px){.doors{flex-direction:column;height:auto}.door{height:80vw;min-height:310px;max-height:460px}.door b{font-size:34px}.mock{font-size:8.5px;padding:7px 9px;opacity:.85}}
+/* Malay status chips are longer: on a narrow door the chip moves under the text instead of squeezing it */
+.door{container-type:inline-size}
+@container (max-width:460px){html[data-lang="ms"] .door .lab{grid-template-columns:minmax(0,1fr);gap:12px}html[data-lang="ms"] .door .st{justify-self:start}}
+@container (max-width:340px){html[data-lang="ms"] .door .now{font-size:11px}}
+.cur{position:fixed;left:0;top:0;z-index:90;pointer-events:none;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--warm2);mix-blend-mode:difference;transition:width .5s var(--expo),height .5s var(--expo),margin .5s var(--expo),background .4s,opacity .3s;display:none;opacity:0}
+.cur span{position:absolute;inset:0;display:grid;place-items:center;font:600 12px/1.15 var(--sans);color:#005C96;opacity:0;transition:opacity .3s;text-align:center;padding:12px}
+.cur.big{width:120px;height:120px;margin:-60px 0 0 -60px;mix-blend-mode:normal;background:rgba(255,255,255,.95)}
+.cur.big span{opacity:1}
+@media(pointer:fine){.cur{display:block}}
+
+/* titles ticker */
+
+/* video studio */
+.studio{padding-top:clamp(48px,6vw,88px)}
+.st-wrap{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:clamp(32px,4vw,64px);align-items:center;padding-block:var(--s5)}
+.counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s2);margin:var(--s4) 0 var(--s3)}
+.count{padding:16px;border-radius:18px;border:1px solid var(--line);background:var(--glass)}
+.count b{display:block;font:300 32px/1 var(--sans);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.count span{display:block;margin-top:8px;font-size:12px;color:var(--ink3);line-height:1.35}
+.btns{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.reel{position:relative;overflow:hidden;margin-right:calc(-1 * max(clamp(16px,3vw,32px),(100vw - 1320px)/2 + clamp(16px,3vw,32px)));padding-block:12px}
+.track{display:flex;gap:20px;width:max-content;padding-right:22vw}
+.card{position:relative;width:clamp(250px,22vw,320px);flex:none;margin:0}
+.frame{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#00578F;cursor:pointer}
+.frame video,.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--expo)}
+.card:hover .frame video,.card:hover .frame img{transform:scale(1.04)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,88,145,.75));pointer-events:none}
+.pp{position:absolute;left:14px;bottom:14px;z-index:2;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(10,13,20,.62);border:1px solid var(--line);backdrop-filter:blur(10px)}
+.pp svg{width:14px;height:14px;fill:var(--ink)}
+.expand{position:absolute;right:14px;bottom:14px;z-index:2;height:42px;padding:0 14px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;background:rgba(10,13,20,.62);border:1px solid var(--line);backdrop-filter:blur(10px);font-size:12.5px;font-weight:600}
+.views{position:absolute;top:14px;left:14px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:999px;background:rgba(10,13,20,.62);border:1px solid var(--line);backdrop-filter:blur(10px);font-size:12px;font-variant-numeric:tabular-nums}
+.views svg{width:11px;height:11px;fill:var(--warm2)}
+.th-meta:empty{display:none}
+.card h3{margin:14px 0 4px;font:400 19px/1.25 var(--serif)}
+.card p{margin:0;font-size:13px;color:var(--ink2);line-height:1.5}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:10px;border:1px solid var(--line);font-size:12.5px;font-weight:600;color:var(--ink2);transition:border-color .3s,color .3s}
+.links a:hover{border-color:rgba(220,240,255,.45);color:var(--ink)}
+.card.end .frame{display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(80% 60% at 50% 30%,rgba(191,230,255,.18),transparent 70%),#00578F}
+.card.end .frame::after{display:none}
+.card.end .big{font:300 64px/1 var(--serif);letter-spacing:-.03em}
+.reel-note{margin-top:var(--s3)}
+@media(max-width:900px){.st-wrap{grid-template-columns:1fr;min-height:auto}.reel{margin-right:calc(-1 * clamp(16px,3vw,32px));overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:16px}.reel::-webkit-scrollbar{display:none}.track{padding-right:16px}.card{scroll-snap-align:start;width:72vw;max-width:320px}}
+
+/* theatre */
+.theatre{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:clamp(12px,3vw,40px);background:rgba(4,6,10,.86);backdrop-filter:blur(14px);opacity:0;pointer-events:none;transition:opacity .4s}
+.theatre.on{opacity:1;pointer-events:auto}
+.th-box{position:relative;width:min(1080px,100%);max-height:100%;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:clamp(18px,3vw,40px);align-items:center;transform:translateY(20px) scale(.98);transition:transform .6s var(--expo)}
+.theatre.on .th-box{transform:none}
+.th-media{position:relative;height:min(78vh,720px);aspect-ratio:4/5;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:#000}
+.th-media video,.th-media img{width:100%;height:100%;object-fit:cover}
+.th-info h3{font:300 clamp(30px,3.4vw,48px)/1.05 var(--serif);margin:12px 0 12px;letter-spacing:-.02em}
+.th-info p{color:var(--ink2);margin:0 0 16px;max-width:44ch}
+.th-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.th-meta span{padding:7px 11px;border-radius:999px;border:1px solid var(--line);font-size:12.5px;color:var(--ink2)}
+.th-nav{display:flex;gap:8px;margin-top:22px}
+.icon{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:18px}
+.icon:hover{background:rgba(255,255,255,.09)}
+.th-close{position:absolute;top:-6px;right:-6px}
+@media(max-width:760px){.th-box{grid-template-columns:1fr;align-content:start;overflow:auto;max-height:calc(100svh - 24px)}.th-media{height:auto;width:100%;max-height:58svh}.th-close{top:8px;right:8px;z-index:3;background:rgba(10,13,20,.7)}}
+
+/* office demo */
+.office{padding-top:var(--sec)}
+.of-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,3.5vw,56px);align-items:start;margin-top:var(--s6)}
+@media(max-width:980px){.of-grid{grid-template-columns:1fr}}
+.jobs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:var(--s4)}
+.job{height:42px;padding:0 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:13.5px;font-weight:600;color:var(--ink2);transition:all .3s}
+.job:hover{color:var(--ink);border-color:rgba(220,240,255,.35)}
+.job[aria-pressed="true"]{background:linear-gradient(180deg,#FFFFFF,#DDF1FF);color:#005C96;border-color:transparent}
+.ticket{position:relative;border-radius:26px;border:1px solid var(--line);background:var(--glass);padding:clamp(20px,2.4vw,30px);overflow:hidden}
+.ticket::before{content:"";position:absolute;inset:0 0 auto 0;height:120px;background:radial-gradient(100% 100% at 20% 0%,rgba(191,230,255,.12),transparent 70%);pointer-events:none}
+.t-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:var(--s4)}
+.t-head h3{margin:8px 0 0;font:400 23px/1.2 var(--serif)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:4px;position:relative}
+.steps::before{content:"";position:absolute;left:15px;top:18px;bottom:18px;width:1px;background:var(--line)}
+.sp{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;padding:10px 0;align-items:start}
+.sp .n{position:relative;z-index:1;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#005088;border:1px solid var(--line);font:600 12px/1 var(--sans);color:var(--ink3);transition:all .5s var(--ease)}
+.sp b{display:block;font-size:14.5px;font-weight:600;color:var(--ink3);transition:color .4s}
+.sp span{display:block;font-size:13px;color:var(--ink3);margin-top:2px}
+.sp [data-s]>[lang]{display:inline;margin:0}
+.sp.done .n{border-color:rgba(220,240,255,.6);color:var(--warm2)}
+.sp.done b,.sp.on b{color:var(--ink)}
+.sp.on .n{background:linear-gradient(180deg,#FFFFFF,#DDF1FF);color:#005C96;border-color:transparent;box-shadow:0 0 0 7px rgba(191,230,255,.14)}
+.sp.on.wait .n{animation:ask 1.4s ease-in-out infinite}
+@keyframes ask{50%{box-shadow:0 0 0 13px rgba(191,230,255,.04),0 0 40px rgba(191,230,255,.6)}}
+.sp .dots3{display:inline-flex;gap:3px;margin-left:6px;vertical-align:middle}
+.sp .dots3 i{width:4px;height:4px;border-radius:50%;background:var(--warm2);animation:bl 1s infinite}
+.sp .dots3 i:nth-child(2){animation-delay:.15s}.sp .dots3 i:nth-child(3){animation-delay:.3s}
+@keyframes bl{50%{opacity:.2}}
+.t-act{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--s4)}
+.result{margin-top:var(--s4);padding:16px;border-radius:16px;border:1px solid rgba(93,227,161,.35);background:rgba(93,227,161,.06);font-size:13.5px;color:var(--ink2)}
+.result b{color:var(--ink)}
+.result ul{margin:8px 0 0;padding-left:18px}
+.stage{position:relative;border-radius:30px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/11;background:#00578F;position:sticky;top:132px}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:filter .8s}
+.stage.idle video{filter:brightness(.55) saturate(.7)}
+.stage::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,88,145,.35),transparent 30%,transparent 70%,rgba(0,88,145,.8));pointer-events:none}
+.hud{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px}
+.hud-l{display:grid;gap:6px}
+.hud-msg{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:rgba(10,13,20,.7);border:1px solid var(--line);backdrop-filter:blur(12px);font-size:13.5px}
+.lamps{display:flex;gap:6px;padding:10px 12px;border-radius:14px;background:rgba(10,13,20,.7);border:1px solid var(--line);backdrop-filter:blur(12px)}
+.lamps i{width:9px;height:9px;border-radius:50%;background:var(--cool);opacity:.35;transition:all .5s}
+.lamps i.w{background:var(--warm);opacity:1;box-shadow:0 0 10px var(--warm)}
+.lamps i.y{background:var(--warm2);opacity:1;animation:bl 1s infinite}
+.stage .tag{position:absolute;top:16px;left:16px;z-index:2}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block}
+.dot.w{background:var(--warm);box-shadow:0 0 10px var(--warm)}.dot.d{background:var(--live);box-shadow:0 0 10px var(--live)}.dot.i{background:var(--cool);opacity:.6}
+.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3);margin-top:var(--s6)}
+.val{padding:22px;border-radius:22px;border:1px solid var(--line2);background:rgba(255,255,255,.02)}
+.val b{display:block;font:400 21px/1.2 var(--serif);margin-bottom:6px}
+.val span{font-size:13.5px;color:var(--ink2)}
+@media(max-width:760px){.values{grid-template-columns:1fr}.stage{position:relative;top:auto;aspect-ratio:4/3}}
+
+/* roadmap */
+.next{padding-block:var(--sec) calc(var(--sec) * .6)}
+.road{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4);margin-top:var(--s6)}
+.road::before{content:"";position:absolute;left:8%;right:8%;top:38px;height:1px;background:linear-gradient(90deg,var(--live),var(--warm) 50%,rgba(140,196,255,.5));opacity:.5}
+.stop{position:relative;padding:28px;border-radius:28px;border:1px solid var(--line);background:var(--glass);display:flex;flex-direction:column;gap:14px;min-height:280px;overflow:hidden}
+.stop::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(191,230,255,.11),transparent 60%);opacity:0;transition:opacity .5s;pointer-events:none}
+.stop:hover::before{opacity:1}
+.stop .pin{width:20px;height:20px;border-radius:50%;border:2px solid currentColor;display:grid;place-items:center;color:var(--c,var(--warm))}
+.stop .pin::after{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.stop h3{margin:0;font:300 32px/1.08 var(--serif);letter-spacing:-.02em}
+.stop p{margin:0;color:var(--ink2);font-size:14.5px}
+.stop .btn{margin-top:auto;align-self:flex-start;min-height:44px}
+.stop.ghost{border:1.5px dashed rgba(140,196,255,.38);background:repeating-linear-gradient(135deg,rgba(120,182,255,.045) 0 12px,transparent 12px 24px)}
+@media(max-width:900px){.road{grid-template-columns:1fr}.road::before{left:38px;right:auto;top:30px;bottom:30px;width:1px;height:auto;background:linear-gradient(180deg,var(--live),var(--warm),rgba(140,196,255,.5))}}
+.flex{margin-top:var(--s6);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4);padding:26px 30px;border-radius:24px;border:1px solid var(--line2)}
+.flex h3{margin:6px 0 0;font:300 24px/1.2 var(--serif)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:9px 14px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--ink2)}
+
+footer{position:relative;padding-top:40px;overflow:hidden;border-top:1px solid var(--line2)}
+.foot-links{display:flex;flex-wrap:wrap;gap:22px;font-size:13.5px;color:var(--ink2)}
+.foot-links a:hover{color:var(--ink)}
+.legal{margin-top:12px;font-size:12.5px;color:var(--ink3)}
+.giant{font:300 clamp(80px,21vw,340px)/.8 var(--serif);letter-spacing:-.05em;white-space:nowrap;margin:40px 0 0;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0) 92%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;transform:translateY(12%)}
+.giant em{background:linear-gradient(180deg,rgba(191,230,255,.42),rgba(191,230,255,0) 92%);-webkit-background-clip:text;background-clip:text}
+.lstrip{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(22px,3vw,40px)}
+/* official payment provider (CHIP approved, 17 Oct 2026) */
+.pay{padding-block:calc(var(--sec) * .35) calc(var(--sec) * .15)}
+.paybox{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:var(--s5);align-items:center;padding:clamp(24px,4vw,46px);border-radius:28px;border:1px solid var(--line);background:radial-gradient(120% 150% at 100% 0%,rgba(143,132,255,.16),transparent 60%),var(--bg2)}
+.paybox h2{margin:12px 0 0;font:300 clamp(30px,4.4vw,50px)/1.06 var(--serif);text-wrap:balance}
+.paybox p{margin:14px 0 0;max-width:52ch;color:var(--ink2)}
+.paylogo{display:grid;justify-items:center;gap:14px;padding:clamp(22px,3vw,34px);border-radius:22px;border:1px solid var(--line2);background:rgba(255,255,255,.02);text-decoration:none;color:var(--ink3);font-size:13px;transition:border-color .4s,transform .6s var(--expo)}
+.paylogo img{width:min(280px,78%);height:auto;filter:drop-shadow(0 10px 24px rgba(0,0,0,.6))}
+.paylogo:hover,.paylogo:focus-visible{border-color:rgba(143,132,255,.5);transform:translateY(-4px)}
+@media(max-width:760px){.paybox{grid-template-columns:1fr}}
+.lt{position:relative;height:56px;display:grid;place-items:center;animation:bob 5s ease-in-out infinite;transition:transform .6s var(--expo)}
+.lt:nth-child(2){animation-delay:-1s}.lt:nth-child(3){animation-delay:-2s}.lt:nth-child(4){animation-delay:-3s}.lt:nth-child(5){animation-delay:-4s}
+.lt img{height:56px;width:auto;max-width:170px;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.6));transition:filter .5s}
+.lt.wv img{height:50px}.lt.fv img{height:27px;max-width:190px}.lt.wide img{height:26px}.lt.xwide img{height:20px}.lt.komu img{height:44px}
+.lt::before{content:"";position:absolute;inset:-30% -20%;border-radius:50%;background:radial-gradient(closest-side,rgba(191,230,255,.18),transparent 70%);opacity:0;transition:opacity .5s}
+.lt:hover,.lt:focus-visible{transform:translateY(-8px) scale(1.15);animation-play-state:paused}
+.lt:hover::before,.lt:focus-visible::before{opacity:1}
+.lt:hover img,.lt:focus-visible img{filter:drop-shadow(0 0 22px rgba(191,230,255,.6)) drop-shadow(0 12px 22px rgba(0,0,0,.6))}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@media(max-width:560px){.lt{height:42px}.lt img{height:42px}.lt.wv img{height:36px}.lt.fv img{height:19px}.lt.komu img{height:32px}.lt.wide img{height:20px}.lt.xwide img{height:15px}}
+.brand .mark{position:relative;display:block;width:86px;height:48px;flex:none;margin-right:4px}
+.brand .mark img,.brand .mark canvas{position:absolute;inset:-6px -12px;width:calc(100% + 24px);height:calc(100% + 12px)}
+.brand .mark img{object-fit:contain;padding:8px 12px;transition:opacity .4s}
+.brand .mark canvas{opacity:0;transition:opacity .6s;touch-action:pan-y;cursor:pointer}
+.brand .mark canvas.ready{opacity:1}
+.brand .mark:has(canvas.ready) img{opacity:0}
+@media(max-width:560px){.brand .mark{width:70px;height:40px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ---------- Flexcore Venture blocks (same tokens as aiboleh.ai v3) ---------- */
+:root{--fv:#1C9BE6}
+.brand{gap:12px}
+.brand .mark.fvm{width:64px;height:44px;margin-right:0}
+.brand .mark.fvm img{padding:6px 10px}
+.brand .fvw{height:30px;width:auto;flex:none}
+@media(max-width:560px){.brand .mark.fvm{width:52px;height:38px}.brand .fvw{height:24px}}
+@media(max-width:380px){.brand .fvw{display:none}}
+
+/* hero: portfolio logos under the headline */
+.hlogos{display:grid;gap:14px;margin:clamp(28px,5vh,52px) 0 clamp(36px,6vh,64px)}
+.hlogos .src{letter-spacing:.16em;text-transform:uppercase;font-size:10.5px}
+.lt.aib img{height:52px}
+@media(max-width:560px){.lt.aib img{height:40px}}
+
+section.mv,section.pf,section.sectors,section.journey,section.team,section.contact{padding-block:calc(var(--sec) * .7)}
+
+/* mission / vision */
+.mv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4);margin-top:var(--s5)}
+.mv-card,.sec-card,.pco,.person{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line);background:var(--glass)}
+.mv-card{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px}
+.mv-card .k{font:300 30px/1 var(--serif);letter-spacing:-.02em}
+.mv-card p{margin:0;color:var(--ink2);font-size:15.5px;line-height:1.7}
+.spot::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(191,230,255,.10),transparent 60%);opacity:0;transition:opacity .5s;pointer-events:none}
+.spot:hover::before{opacity:1}
+
+/* portfolio */
+.pgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s3);margin-top:var(--s5)}
+.pco{display:flex;flex-direction:column;gap:10px;padding:26px 22px 22px;min-height:250px;transition:transform .6s var(--expo),border-color .4s}
+.pco:hover{transform:translateY(-6px);border-color:rgba(220,240,255,.35)}
+.pco-logo{height:64px;display:flex;align-items:center}
+.pco-logo img{max-height:56px;max-width:160px;width:auto;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.55))}
+.pco-logo.wide img{max-height:28px}.pco-logo.komu img{max-height:46px}
+.pco b{font:300 25px/1.1 var(--serif);letter-spacing:-.02em;margin-top:8px}
+.pco-d{color:var(--ink2);font-size:14px;line-height:1.55}
+.pco-go{margin-top:auto;font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--warm2)}
+@media(max-width:1100px){.pgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pco{min-height:0}}
+@media(max-width:420px){.pgrid{grid-template-columns:1fr}}
+
+/* sectors */
+.inv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4);margin-top:var(--s5)}
+.sec-card{padding:28px;display:flex;flex-direction:column;gap:12px}
+.sec-card h3{margin:0;font:300 32px/1.08 var(--serif);letter-spacing:-.02em}
+.sec-card p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.65}
+.sec-card .st{color:var(--live)}.sec-card .st i{background:var(--live);box-shadow:0 0 10px var(--live)}
+.xhead{margin-top:var(--s6)}
+.xgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:var(--s4);border:1px solid var(--line2);border-radius:24px;overflow:hidden;background:var(--line2)}
+.xs{padding:22px 22px 24px;background:var(--bg)}
+.xs h4{margin:0 0 8px;font:600 15px/1.3 var(--sans)}
+.xs p{margin:0;color:var(--ink3);font-size:13.5px;line-height:1.6}
+.xclose{margin:var(--s5) auto 0;max-width:60ch;text-align:center;font:300 clamp(20px,2vw,26px)/1.35 var(--serif);color:var(--ink2)}
+@media(max-width:1000px){.inv{grid-template-columns:1fr}.xgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.xgrid{grid-template-columns:1fr}}
+
+/* KL band */
+.band{position:relative;height:clamp(320px,52vh,560px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.band-img{position:absolute;inset:-12% 0;z-index:-2;background:url(/assets/kl-city-1400.jpg) center 40%/cover no-repeat;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--bg) 0%,rgba(0,88,145,.15) 30%,rgba(0,88,145,.35) 65%,var(--bg) 100%)}
+.band>.wrap{width:100%}
+.band-q{margin:0 0 clamp(28px,5vh,56px);font:300 clamp(34px,4.6vw,68px)/1.04 var(--serif);letter-spacing:-.03em;max-width:16ch;text-wrap:balance}
+
+/* journey timeline */
+.tline{list-style:none;margin:var(--s6) 0 0;padding:0;position:relative}
+.tline::before{content:"";position:absolute;left:142px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--warm),rgba(191,230,255,.25) 60%,var(--live))}
+.tl{position:relative;display:grid;grid-template-columns:142px minmax(0,1fr);gap:0 40px;padding:0 0 clamp(28px,4vh,44px)}
+.tl::before{content:"";position:absolute;left:136px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--warm);box-shadow:0 0 14px rgba(191,230,255,.5)}
+.tl.now::before{border-color:var(--live);box-shadow:0 0 14px rgba(93,227,161,.5)}
+.tl-y{font:600 12px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--warm2);padding-right:24px;text-align:right}
+.tl.now .tl-y{color:var(--live)}
+.tl-c h3{margin:0 0 8px;font:300 clamp(24px,2.2vw,32px)/1.1 var(--serif);letter-spacing:-.02em}
+.tl-c p{margin:0;color:var(--ink2);max-width:72ch;line-height:1.7;font-size:15px}
+@media(max-width:700px){.tline::before{left:6px}.tl{grid-template-columns:1fr;padding-left:30px;gap:0}.tl::before{left:0}.tl-y{text-align:left;padding:0 0 6px}.tl-c{min-width:0}}
+
+/* team */
+.tm-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.person{margin:0;aspect-ratio:4/3}
+.person.mono{display:grid;place-items:center;background:radial-gradient(70% 70% at 50% 38%,rgba(255,255,255,.16),transparent 70%),var(--glass)}
+.person.mono img{width:auto;height:46%;object-fit:contain;opacity:1;filter:drop-shadow(0 18px 40px rgba(0,0,0,.6));margin-bottom:12%}
+.person img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.person figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 26px;display:flex;flex-direction:column;gap:4px;background:linear-gradient(180deg,transparent,rgba(0,88,145,.92))}
+.person b{font:300 32px/1.05 var(--serif);letter-spacing:-.02em}
+.person span{color:var(--ink2);font-size:13.5px}
+@media(max-width:900px){.tm-grid{grid-template-columns:1fr}}
+
+/* FAQ (Virtual Office accordion) */
+.faqs{padding-block:calc(var(--sec) * .7)}
+.faq{max-width:820px;margin:var(--s6) auto 0;border-top:1px solid var(--line)}
+.q{border-bottom:1px solid var(--line)}
+.q button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 4px;text-align:left;font-size:clamp(15.5px,1.25vw,17.5px);font-weight:600;transition:color .3s}
+.q button:hover{color:var(--warm2)}
+.q button i{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .6s var(--expo),background .4s,border-color .4s}
+.q button i::before,.q button i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:var(--warm2)}
+.q button i::after{transform:rotate(90deg);transition:transform .6s var(--expo)}
+.q.open button i{background:rgba(191,230,255,.12);border-color:rgba(220,240,255,.5)}.q.open button i::after{transform:rotate(0)}
+.q .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--expo)}
+.q.open .a{grid-template-rows:1fr}
+.q .a>div{overflow:hidden}
+.q .a p{margin:0 4px 16px;color:var(--ink2);max-width:66ch;line-height:1.7}
+.q .a p:last-child{margin-bottom:26px}
+
+/* contact */
+.ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.mail{margin-top:var(--s4);color:var(--ink3);font-size:14px}
+.mail a{color:var(--warm2);text-decoration:underline;text-underline-offset:3px}
+.cform{display:grid;gap:10px;padding:clamp(22px,3vw,34px);border-radius:28px;border:1px solid var(--line);background:var(--glass)}
+.cform label{font:600 13px/1.3 var(--sans);color:var(--ink2);margin-top:8px}
+.cform label em{font-style:normal;font-weight:400;color:var(--ink3)}
+.cform input,.cform textarea{width:100%;font:400 15px/1.5 var(--sans);color:var(--ink);background:rgba(0,88,145,.6);border:1px solid var(--line);border-radius:14px;padding:13px 15px;transition:border-color .3s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:rgba(220,240,255,.6)}
+.cform textarea{resize:vertical;min-height:130px}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.cform .btn{margin-top:12px;justify-self:start}
+.cstat{margin:4px 0 0;min-height:1.4em;font-size:14px;color:var(--ink2)}
+.cstat.ok{color:var(--live)}.cstat.err{color:#FF8A7A}
+@media(max-width:900px){.ct-grid{grid-template-columns:1fr}}
+
+footer .soc{margin-top:14px}
+
+/* blue theme details */
+.xs{background:var(--bg2)}
+.xgrid{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.14)}
+.band::after{background:linear-gradient(180deg,var(--bg) 0%,rgba(0,103,166,.25) 30%,rgba(0,103,166,.45) 65%,var(--bg) 100%)}
+.cform input,.cform textarea{background:rgba(0,50,92,.55)}
+</style>
+</head>
+<body>
+<div class="cur" id="cur" aria-hidden="true"><span id="curT"></span></div>
+<header class="nav" id="nav"><div class="sitebar"><div class="wrap"><nav class="sites" aria-label="Our companies" data-i18a="aria-label" data-en-aria-label="Our companies" data-ms-aria-label="Syarikat kami"><a href="#top" class="on" aria-current="page">Flexcore Venture</a><a href="https://aiboleh.ai/">A.I. Boleh</a></nav></div></div><div class="wrap">
+  <a class="brand" href="#top" aria-label="Flexcore Venture, back to top" data-i18a="aria-label" data-en-aria-label="Flexcore Venture, back to top" data-ms-aria-label="Flexcore Venture, kembali ke atas"><span class="mark fvm"><img src="/assets/logos/fv-mark-white.png" alt=""><canvas data-logo3d="nav" aria-hidden="true"></canvas></span><img class="fvw" src="/assets/logos/fv-wordmark-white.png" alt="Flexcore Venture"></a>
+  <nav aria-label="Main" data-i18a="aria-label" data-en-aria-label="Main" data-ms-aria-label="Utama"><a class="l" href="#portfolio"><span lang="en">Portfolio</span><span lang="ms">Portfolio</span></a><a class="l" href="#journey"><span lang="en">Journey</span><span lang="ms">Perjalanan</span></a><a class="l" href="#team"><span lang="en">Team</span><span lang="ms">Pasukan</span></a><a class="l" href="#faq"><span lang="en">FAQ</span><span lang="ms">Soalan</span></a><a class="btn pri mag" href="#contact"><span lang="en">Let's connect</span><span lang="ms">Hubungi kami</span></a><div class="lang" role="group" aria-label="Language / Bahasa"><button type="button" data-l="ms" aria-pressed="false">BM</button><button type="button" data-l="en" aria-pressed="true">EN</button></div></nav>
+</div></header>
+<main>
+<section class="hero" id="top">
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-top"><div>
+      <span class="eb rev"><i></i><span lang="en">Venture company · Malaysia · Since 2023</span><span lang="ms">Syarikat usaha niaga · Malaysia · Sejak 2023</span></span>
+      <h1 class="split"><span lang="en">Empowering visionaries. <span class="l2 warm-em">Fuelling growth.</span></span><span lang="ms">Memperkasa insan berwawasan. <span class="l2 warm-em">Memacu pertumbuhan.</span></span></h1></div>
+      <div class="proof rev">
+        <p><span lang="en"><b>We back real businesses.</b> We are committed to propelling entrepreneurs towards success and leaving an enduring impact on industries that shape the future.</span><span lang="ms"><b>Kami menyokong perniagaan sebenar.</b> Kami komited membawa usahawan ke arah kejayaan dan meninggalkan kesan berkekalan pada industri yang membentuk masa depan.</span></p>
+        <div class="pstats">
+          <div class="pstat"><b>5</b><span lang="en">portfolio companies</span><span lang="ms">syarikat portfolio</span></div>
+          <div class="pstat"><b>15</b><span lang="en">sectors in focus</span><span lang="ms">sektor tumpuan</span></div>
+          <div class="pstat"><b>2023</b><span lang="en">founded, Q3</span><span lang="ms">ditubuhkan, S3</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hlogos rev"><span class="src"><span lang="en">Our portfolio</span><span lang="ms">Portfolio kami</span></span><div class="lstrip" aria-label="Portfolio companies" data-i18a="aria-label" data-en-aria-label="Portfolio companies" data-ms-aria-label="Syarikat portfolio"><a class="lt wide" href="https://chip-in.asia/" target="_blank" rel="noopener" title="CHIP IN"><img src="/assets/logos/chip-light.svg" alt="CHIP IN"></a><a class="lt komu" href="https://thekomunal.com/" target="_blank" rel="noopener" title="The Komunal Cafe"><img src="/assets/logos/komunal-light.svg" alt="The Komunal Cafe"></a><a class="lt " href="https://www.vamos.com.my/" target="_blank" rel="noopener" title="Team Vamos"><img src="/assets/logos/vamos-glow.png" alt="Team Vamos"></a><a class="lt aib" href="https://aiboleh.ai/" target="_blank" rel="noopener" title="A.I. Boleh"><img src="/assets/logos/aiboleh-logo.webp" alt="A.I. Boleh"></a><a class="lt wide" href="https://tuahland.com/" target="_blank" rel="noopener" title="Tuah Land"><img src="/assets/logos/tuahland.png" alt="Tuah Land"></a></div></div>
+  </div>
+</section>
+<section class="mv" id="about" aria-labelledby="mv-h"><div class="wrap">
+  <span class="eb"><i></i><span lang="en">Our mission</span><span lang="ms">Misi kami</span></span>
+  <h2 class="split" id="mv-h"><span lang="en">Seamless growth. <span class="warm-em">Impactful solutions.</span> A sustainable future.</span><span lang="ms">Pertumbuhan lancar. <span class="warm-em">Penyelesaian berimpak.</span> Masa depan lestari.</span></h2>
+  <div class="mv-grid">
+    <div class="mv-card spot"><span class="k"><span lang="en">Mission</span><span lang="ms">Misi</span></span>
+      <p><span lang="en">Flexcore Venture is committed to fostering innovation and sustainability across key sectors including food security, fintech, property, healthcare, and technology.</span><span lang="ms">Flexcore Venture komited memupuk inovasi dan kelestarian merentasi sektor utama termasuk keselamatan makanan, fintech, hartanah, penjagaan kesihatan dan teknologi.</span></p>
+      <p><span lang="en">We empower entrepreneurs and startups with strategic investments and insights, aiming for advancements that ensure community well-being, digital transformation, and responsible resource management.</span><span lang="ms">Kami memperkasa usahawan dan syarikat permulaan dengan pelaburan strategik dan pandangan, ke arah kemajuan yang menjamin kesejahteraan komuniti, transformasi digital dan pengurusan sumber yang bertanggungjawab.</span></p></div>
+    <div class="mv-card spot"><span class="k"><span lang="en">Vision</span><span lang="ms">Visi</span></span>
+      <p><span lang="en">Our vision is to lead in transforming entrepreneurial visions into impactful realities across diverse industries.</span><span lang="ms">Visi kami adalah untuk menerajui usaha mengubah visi keusahawanan menjadi realiti berimpak merentasi pelbagai industri.</span></p>
+      <p><span lang="en">By 2030, we aim to have established a global ecosystem of startups that are leaders in innovation, sustainability, and social responsibility.</span><span lang="ms">Menjelang 2030, kami menyasarkan sebuah ekosistem global syarikat permulaan yang menerajui inovasi, kelestarian dan tanggungjawab sosial.</span></p>
+      <p><span lang="en">We envision a future where our investments contribute to a prosperous, environmentally friendly, and technologically advanced society, leaving a lasting legacy of positive change and progress.</span><span lang="ms">Kami membayangkan masa depan di mana pelaburan kami menyumbang kepada masyarakat yang makmur, mesra alam dan maju dari segi teknologi, meninggalkan legasi perubahan positif dan kemajuan yang berkekalan.</span></p></div>
+  </div>
+</div></section>
+<section class="pf" id="portfolio" aria-labelledby="pf-h"><div class="wrap">
+  <span class="eb"><i></i><span lang="en">Our portfolio · 2014–2026</span><span lang="ms">Portfolio kami · 2014–2026</span></span>
+  <h2 class="split" id="pf-h"><span lang="en">Five companies. <span class="warm-em">One family.</span></span><span lang="ms">Lima syarikat. <span class="warm-em">Satu keluarga.</span></span></h2>
+  <div class="pgrid"><a class="pco spot" href="https://chip-in.asia/" target="_blank" rel="noopener"><span class="pco-logo wide"><img src="/assets/logos/chip-light.svg" alt="CHIP IN" loading="lazy"></span><b>CHIP IN</b><span class="pco-d"><span lang="en">Digital finance platform for your business</span><span lang="ms">Platform kewangan digital untuk perniagaan anda</span></span><span class="pco-go"><span lang="en">Visit site</span><span lang="ms">Lawati laman</span> <span aria-hidden="true">↗</span></span></a><a class="pco spot" href="https://thekomunal.com/" target="_blank" rel="noopener"><span class="pco-logo komu"><img src="/assets/logos/komunal-light.svg" alt="The Komunal Cafe" loading="lazy"></span><b>The Komunal Cafe</b><span class="pco-d"><span lang="en">Brew your perfect day, every day</span><span lang="ms">Seduh hari sempurna anda, setiap hari</span></span><span class="pco-go"><span lang="en">Visit site</span><span lang="ms">Lawati laman</span> <span aria-hidden="true">↗</span></span></a><a class="pco spot" href="https://www.vamos.com.my/" target="_blank" rel="noopener"><span class="pco-logo "><img src="/assets/logos/vamos-glow.png" alt="Team Vamos" loading="lazy"></span><b>Team Vamos</b><span class="pco-d"><span lang="en">Malaysian esports organisation: MPL Malaysia, Free Fire, PUBG</span><span lang="ms">Organisasi e-sukan Malaysia: MPL Malaysia, Free Fire, PUBG</span></span><span class="pco-go"><span lang="en">Visit site</span><span lang="ms">Lawati laman</span> <span aria-hidden="true">↗</span></span></a><a class="pco spot" href="https://aiboleh.ai/" target="_blank" rel="noopener"><span class="pco-logo aib"><img src="/assets/logos/aiboleh-logo.webp" alt="A.I. Boleh" loading="lazy"></span><b>A.I. Boleh</b><span class="pco-d"><span lang="en">AI video education and tools for Malaysians</span><span lang="ms">Pendidikan video AI dan alatan untuk rakyat Malaysia</span></span><span class="pco-go"><span lang="en">Visit site</span><span lang="ms">Lawati laman</span> <span aria-hidden="true">↗</span></span></a><a class="pco spot" href="https://tuahland.com/" target="_blank" rel="noopener"><span class="pco-logo wide"><img src="/assets/logos/tuahland.png" alt="Tuah Land" loading="lazy"></span><b>Tuah Land</b><span class="pco-d"><span lang="en">Swift solutions for property challenges</span><span lang="ms">Penyelesaian pantas untuk cabaran hartanah</span></span><span class="pco-go"><span lang="en">Visit site</span><span lang="ms">Lawati laman</span> <span aria-hidden="true">↗</span></span></a></div>
+</div></section>
+<section class="sectors" id="sectors" aria-labelledby="se-h"><div class="wrap">
+  <span class="eb" style="--c:var(--live)"><i></i><span lang="en">Where we invest</span><span lang="ms">Di mana kami melabur</span></span>
+  <h2 class="split" id="se-h"><span lang="en">Three sectors today. <span class="warm-em">Twelve on the horizon.</span></span><span lang="ms">Tiga sektor hari ini. <span class="warm-em">Dua belas di hadapan.</span></span></h2>
+  <div class="inv"><div class="sec-card spot"><span class="st"><i></i><span lang="en">Invested</span><span lang="ms">Telah dilabur</span></span><h3><span lang="en">Food Security</span><span lang="ms">Keselamatan Makanan</span></h3><p><span lang="en">Cultivating a robust portfolio in the food industry, from vibrant cafes to state-of-the-art bread factories and essential grocery outlets, we're securing the foundations of sustenance.</span><span lang="ms">Kami membina portfolio yang kukuh dalam industri makanan, daripada kafe yang meriah hingga kilang roti moden dan kedai runcit keperluan harian, demi menjamin asas sumber makanan.</span></p></div><div class="sec-card spot"><span class="st"><i></i><span lang="en">Invested</span><span lang="ms">Telah dilabur</span></span><h3><span lang="en">Fintech</span><span lang="ms">Fintech</span></h3><p><span lang="en">Pioneering the financial landscape, our investments in payment gateways and service providers are at the forefront of digital transformation, enhancing seamless and secure transactions.</span><span lang="ms">Kami menerajui landskap kewangan: pelaburan kami dalam gerbang pembayaran dan penyedia perkhidmatan berada di barisan hadapan transformasi digital, menjadikan transaksi lebih lancar dan selamat.</span></p></div><div class="sec-card spot"><span class="st"><i></i><span lang="en">Invested</span><span lang="ms">Telah dilabur</span></span><h3><span lang="en">Property</span><span lang="ms">Hartanah</span></h3><p><span lang="en">In the realm of real estate, Flexcore Venture is involved in the dynamic world of buying and selling subsale houses and lands, crafting valuable spaces for communities to thrive.</span><span lang="ms">Dalam bidang hartanah, Flexcore Venture terlibat dalam jual beli rumah dan tanah subsale, mewujudkan ruang bernilai untuk komuniti berkembang.</span></p></div></div>
+  <div class="xhead"><span class="eb" style="--c:var(--ghost)"><i></i><span lang="en">Sectors we're expanding into</span><span lang="ms">Sektor yang sedang kami terokai</span></span></div>
+  <div class="xgrid"><div class="xs"><h4><span lang="en">Healthcare</span><span lang="ms">Penjagaan Kesihatan</span></h4><p><span lang="en">Our focus is on innovations that promote overall well-being, accessibility, and transformative advancements in the health industry.</span><span lang="ms">Tumpuan kami ialah inovasi yang menggalakkan kesejahteraan menyeluruh, kebolehcapaian dan kemajuan transformatif dalam industri kesihatan.</span></p></div><div class="xs"><h4><span lang="en">Islamic Tech Solutions</span><span lang="ms">Penyelesaian Teknologi Islam</span></h4><p><span lang="en">Our goal is to empower ventures that contribute to the betterment of Islam and society, fostering a positive impact on communities.</span><span lang="ms">Matlamat kami adalah memperkasa usaha niaga yang menyumbang kepada kebaikan Islam dan masyarakat, serta memberi kesan positif kepada komuniti.</span></p></div><div class="xs"><h4><span lang="en">E-commerce</span><span lang="ms">E-dagang</span></h4><p><span lang="en">Our commitment is to facilitate seamless transactions, enhance the online shopping experience, and propel startups to new heights in the dynamic world of digital commerce.</span><span lang="ms">Kami komited memudahkan transaksi yang lancar, meningkatkan pengalaman membeli-belah dalam talian, dan membawa syarikat permulaan ke tahap lebih tinggi dalam dunia perdagangan digital yang dinamik.</span></p></div><div class="xs"><h4><span lang="en">Agritech / Agriculture</span><span lang="ms">Agriteknologi / Pertanian</span></h4><p><span lang="en">We are actively seeking innovations that enhance productivity, promote sustainable farming methods, and contribute to the global agricultural landscape.</span><span lang="ms">Kami giat mencari inovasi yang meningkatkan produktiviti, menggalakkan kaedah pertanian lestari dan menyumbang kepada landskap pertanian global.</span></p></div><div class="xs"><h4><span lang="en">Automotive</span><span lang="ms">Automotif</span></h4><p><span lang="en">We seek to support startups driving innovation in transportation, whether through electric vehicles, smart mobility solutions or cutting-edge automotive technologies.</span><span lang="ms">Kami ingin menyokong syarikat permulaan yang memacu inovasi pengangkutan, sama ada melalui kenderaan elektrik, penyelesaian mobiliti pintar atau teknologi automotif terkini.</span></p></div><div class="xs"><h4><span lang="en">Edtech</span><span lang="ms">Teknologi Pendidikan</span></h4><p><span lang="en">Our objective is to empower startups leveraging technology to enhance learning experiences, making education more accessible and impactful for learners globally.</span><span lang="ms">Objektif kami adalah memperkasa syarikat permulaan yang menggunakan teknologi untuk meningkatkan pengalaman pembelajaran, menjadikan pendidikan lebih mudah dicapai dan berimpak untuk pelajar di seluruh dunia.</span></p></div><div class="xs"><h4><span lang="en">Clean Energy</span><span lang="ms">Tenaga Bersih</span></h4><p><span lang="en">Our mission is to support innovations addressing environmental challenges, paving the way for a greener and more sustainable future.</span><span lang="ms">Misi kami adalah menyokong inovasi yang menangani cabaran alam sekitar, membuka jalan ke arah masa depan yang lebih hijau dan lestari.</span></p></div><div class="xs"><h4><span lang="en">Health Tech</span><span lang="ms">Teknologi Kesihatan</span></h4><p><span lang="en">Our focus is on supporting startups that leverage technology to improve healthcare delivery, diagnostics, and overall well-being, ensuring a healthier future for all.</span><span lang="ms">Tumpuan kami ialah menyokong syarikat permulaan yang menggunakan teknologi untuk menambah baik penyampaian penjagaan kesihatan, diagnostik dan kesejahteraan menyeluruh, demi masa depan yang lebih sihat untuk semua.</span></p></div><div class="xs"><h4><span lang="en">AI (Artificial Intelligence)</span><span lang="ms">AI (Kecerdasan Buatan)</span></h4><p><span lang="en">We're actively seeking startups harnessing AI's power to drive innovation across industries. From data analytics to machine learning applications, our aim is to support ventures at the forefront of AI.</span><span lang="ms">Kami giat mencari syarikat permulaan yang memanfaatkan kuasa AI untuk memacu inovasi merentasi industri. Daripada analitik data hingga aplikasi pembelajaran mesin, kami mahu menyokong usaha niaga di barisan hadapan AI.</span></p></div><div class="xs"><h4><span lang="en">Industrial</span><span lang="ms">Perindustrian</span></h4><p><span lang="en">We are interested in startups that bring efficiency, sustainability, and innovation to traditional industrial processes, contributing to industrial evolution.</span><span lang="ms">Kami berminat dengan syarikat permulaan yang membawa kecekapan, kelestarian dan inovasi kepada proses perindustrian tradisional, menyumbang kepada evolusi industri.</span></p></div><div class="xs"><h4><span lang="en">Mining</span><span lang="ms">Perlombongan</span></h4><p><span lang="en">Our focus is on startups that prioritize sustainable and ethical practices in mining operations, paving the way for responsible resource management.</span><span lang="ms">Tumpuan kami ialah syarikat permulaan yang mengutamakan amalan lestari dan beretika dalam operasi perlombongan, membuka jalan kepada pengurusan sumber yang bertanggungjawab.</span></p></div><div class="xs"><h4><span lang="en">Hospitality Industry</span><span lang="ms">Industri Hospitaliti</span></h4><p><span lang="en">We're venturing into startups that redefine accommodation and travel experiences. Our focus is on innovative models that enhance the hospitality sector, providing unique and impactful experiences for travellers.</span><span lang="ms">Kami meneroka syarikat permulaan yang mentakrif semula pengalaman penginapan dan pelancongan. Tumpuan kami ialah model inovatif yang meningkatkan sektor hospitaliti dan memberikan pengalaman unik serta berimpak kepada pengembara.</span></p></div></div>
+  <p class="xclose"><span lang="en">In every facet of our expansion, Flexcore Venture remains steadfast in its dedication to nurturing the seeds of innovation.</span><span lang="ms">Dalam setiap aspek pengembangan kami, Flexcore Venture kekal teguh dalam komitmen menyemai benih inovasi.</span></p>
+</div></section>
+<section class="band" aria-hidden="true"><div class="band-img"></div><div class="wrap"><p class="band-q"><span lang="en">Navigating the investment landscape <span class="warm-em">since 2014.</span></span><span lang="ms">Mengemudi landskap pelaburan <span class="warm-em">sejak 2014.</span></span></p></div></section>
+<section class="journey" id="journey" aria-labelledby="jo-h"><div class="wrap">
+  <span class="eb"><i></i><span lang="en">Our journey</span><span lang="ms">Perjalanan kami</span></span>
+  <h2 class="split" id="jo-h"><span lang="en">From one Bitcoin <span class="warm-em">to five companies.</span></span><span lang="ms">Daripada satu Bitcoin <span class="warm-em">kepada lima syarikat.</span></span></h2>
+  <ol class="tline"><li class="tl"><span class="tl-y">2014</span><div class="tl-c"><h3><span lang="en">The Genesis</span><span lang="ms">Permulaan</span></h3><p><span lang="en">The roots of Flexcore Venture trace back to 2014 when we took a pioneering step into the virtual realm, acquiring our first Bitcoin. This marked our initiation into the dynamic world of virtual assets, setting the stage for a journey defined by foresight and innovation.</span><span lang="ms">Akar Flexcore Venture bermula pada 2014 apabila kami melangkah ke dunia maya dengan memperoleh Bitcoin pertama kami. Ia menandakan permulaan kami dalam dunia aset maya yang dinamik, membuka jalan kepada perjalanan yang ditandai oleh pandangan jauh dan inovasi.</span></p></div></li><li class="tl"><span class="tl-y">2016 – 2019</span><div class="tl-c"><h3><span lang="en">Navigating Cryptocurrency</span><span lang="ms">Mengemudi Mata Wang Kripto</span></h3><p><span lang="en">In the subsequent years, from 2016 to 2019, we seized the opportunities presented by the burgeoning cryptocurrency landscape. Diversifying our portfolio, we strategically invested in various cryptocurrencies, laying the groundwork for our expertise in the digital financial frontier.</span><span lang="ms">Dari 2016 hingga 2019, kami merebut peluang dalam landskap mata wang kripto yang sedang berkembang. Kami mempelbagaikan portfolio dengan melabur secara strategik dalam pelbagai mata wang kripto, sekali gus membina kepakaran kami dalam kewangan digital.</span></p></div></li><li class="tl"><span class="tl-y">2019</span><div class="tl-c"><h3><span lang="en">Techcryption Media</span><span lang="ms">Techcryption Media</span></h3><p><span lang="en">In 2019, the culmination of our cryptocurrency journey led to the founding of Techcryption Media Sdn Bhd. This venture served as a testament to our commitment to fostering education and awareness about blockchain technology and the adoption of Bitcoin. Techcryption Media became a beacon for crypto enthusiasts, providing comprehensive coverage of news and information. Techcryption Media has since been wound down.</span><span lang="ms">Pada 2019, perjalanan kripto kami membawa kepada penubuhan Techcryption Media Sdn Bhd, sebagai bukti komitmen kami terhadap pendidikan dan kesedaran tentang teknologi blockchain dan penggunaan Bitcoin. Techcryption Media menjadi rujukan peminat kripto dengan liputan berita dan maklumat yang menyeluruh. Techcryption Media telah pun ditutup.</span></p></div></li><li class="tl"><span class="tl-y">2020</span><div class="tl-c"><h3><span lang="en">Tuah Land</span><span lang="ms">Tuah Land</span></h3><p><span lang="en">The year 2020 witnessed the establishment of Tuah Land Sdn Bhd, marking our foray into the real estate industry. Specializing in the buying and selling of subsale houses and land, Tuah Land became an integral part of our diversified investment strategy, contributing to the dynamic expansion of our portfolio.</span><span lang="ms">Tahun 2020 menyaksikan penubuhan Tuah Land Sdn Bhd, menandakan langkah kami ke dalam industri hartanah. Dengan pengkhususan dalam jual beli rumah dan tanah subsale, Tuah Land menjadi sebahagian penting strategi pelaburan kami yang pelbagai.</span></p></div></li><li class="tl"><span class="tl-y">2022 – 2023</span><div class="tl-c"><h3><span lang="en">NFT Exploration</span><span lang="ms">Penerokaan NFT</span></h3><p><span lang="en">Building on our foundation, we embraced the future by expanding our investments into the realm of Non-Fungible Tokens (NFTs) from 2022 to 2023. This strategic move reflected our unwavering commitment to staying at the forefront of transformative technologies and trends.</span><span lang="ms">Berpaksikan asas itu, kami meluaskan pelaburan ke dalam Token Tidak Boleh Ditukar Ganti (NFT) dari 2022 hingga 2023, mencerminkan komitmen kami untuk sentiasa berada di barisan hadapan teknologi dan trend yang transformatif.</span></p></div></li><li class="tl"><span class="tl-y">Q3 2023</span><div class="tl-c"><h3><span lang="en">Birth of Flexcore Venture</span><span lang="ms">Kelahiran Flexcore Venture</span></h3><p><span lang="en">The third quarter of 2023 marked a significant milestone in our journey as we founded Flexcore Venture. Driven by the vision to channel our resources into tangible, real-world industries, we made a strategic shift into sectors such as Fintech, Food Security, Property, Healthcare, E-commerce, Agritech, Edtech, Clean Energy and more. Flexcore Venture was born to be a catalyst for genuine business growth.</span><span lang="ms">Suku ketiga 2023 menjadi titik penting apabila kami menubuhkan Flexcore Venture. Didorong oleh visi untuk menyalurkan sumber kami ke dalam industri dunia sebenar, kami beralih secara strategik ke sektor seperti Fintech, Keselamatan Makanan, Hartanah, Penjagaan Kesihatan, E-dagang, Agriteknologi, Teknologi Pendidikan, Tenaga Bersih dan banyak lagi. Flexcore Venture lahir sebagai pemangkin pertumbuhan perniagaan yang sebenar.</span></p></div></li><li class="tl"><span class="tl-y">2023</span><div class="tl-c"><h3><span lang="en">Building the Portfolio</span><span lang="ms">Membina Portfolio</span></h3><p><span lang="en">In 2023 we invested in CHIP IN, a Malaysian digital finance platform, and The Komunal Cafe. These investments brought fintech and food into our portfolio, and both remain part of it today.</span><span lang="ms">Pada 2023 kami melabur dalam CHIP IN, platform kewangan digital Malaysia, dan The Komunal Cafe. Pelaburan ini membawa fintech dan makanan ke dalam portfolio kami, dan kedua-duanya kekal sebahagian daripadanya hingga hari ini.</span></p></div></li><li class="tl"><span class="tl-y">2024</span><div class="tl-c"><h3><span lang="en">Team Vamos</span><span lang="ms">Team Vamos</span></h3><p><span lang="en">In 2024 we invested in Team Vamos, a Malaysian esports organisation that competes in MPL Malaysia, Free Fire and PUBG. It marked our first step into esports and gaming.</span><span lang="ms">Pada 2024 kami melabur dalam Team Vamos, organisasi e-sukan Malaysia yang bertanding dalam MPL Malaysia, Free Fire dan PUBG. Ia langkah pertama kami ke dunia e-sukan dan permainan.</span></p></div></li><li class="tl"><span class="tl-y">2026</span><div class="tl-c"><h3><span lang="en">A.I. Boleh</span><span lang="ms">A.I. Boleh</span></h3><p><span lang="en">A.I. Boleh is our venture in artificial intelligence. It teaches Malaysians to make videos with AI through short films, tutorials and the e-book Prompt Macam Director. In 2026 A.I. Boleh began building its next product, the Virtual Office: a team of AI workers that helps businesses get work done. It is in development, with a public demo coming soon.</span><span lang="ms">A.I. Boleh ialah usaha niaga kami dalam kecerdasan buatan. Ia mengajar rakyat Malaysia menghasilkan video dengan AI melalui filem pendek, tutorial dan e-book Prompt Macam Director. Pada 2026 A.I. Boleh mula membina produk seterusnya, Virtual Office: satu pasukan pekerja AI yang membantu perniagaan menyiapkan kerja. Ia masih dalam pembangunan, dengan demo awam akan datang.</span></p></div></li><li class="tl now"><span class="tl-y"><span lang="en">Today</span><span lang="ms">Hari ini</span></span><div class="tl-c"><h3><span lang="en">Today and beyond</span><span lang="ms">Hari ini dan seterusnya</span></h3><p><span lang="en">As we stand at the intersection of experience and innovation, Flexcore Venture is committed to shaping the future of industries. Our journey is characterised by adaptability, resilience, and an unwavering dedication to empowering visionary entrepreneurs. Join us as we continue to script a story of success, one investment at a time.</span><span lang="ms">Kini, di persimpangan pengalaman dan inovasi, Flexcore Venture komited membentuk masa depan industri. Perjalanan kami ditandai oleh kebolehsuaian, ketahanan dan dedikasi tidak berbelah bahagi untuk memperkasa usahawan berwawasan. Sertai kami sambil kami terus menulis kisah kejayaan, satu pelaburan pada satu masa.</span></p></div></li></ol>
+</div></section>
+<section class="team" id="team" aria-labelledby="tm-h"><div class="wrap tm-grid">
+  <div><span class="eb" style="--c:var(--teal)"><i></i><span lang="en">Our team</span><span lang="ms">Pasukan kami</span></span>
+  <h2 class="split" id="tm-h"><span lang="en">We’re small, <span class="warm-em">but we dream big.</span></span><span lang="ms">Kami kecil, <span class="warm-em">tetapi impian kami besar.</span></span></h2>
+  <p class="lead"><span lang="en">The third quarter of 2023 marked a significant milestone in our journey as we founded Flexcore Venture. Driven by the vision to channel our resources into tangible, real-world industries, we made a strategic shift.</span><span lang="ms">Suku ketiga 2023 menjadi titik penting apabila kami menubuhkan Flexcore Venture. Didorong oleh visi untuk menyalurkan sumber kami ke dalam industri dunia sebenar, kami membuat peralihan strategik.</span></p></div>
+  <figure class="person mono spot"><img src="/assets/logos/fv-mark-white.png" alt="" loading="lazy"><figcaption><b>Mohd Zharif</b><span><span lang="en">CEO, Director &amp; Shareholder</span><span lang="ms">Ketua Pegawai Eksekutif, Pengarah &amp; Pemegang Saham</span></span></figcaption></figure>
+</div></section>
+<section class="faqs" id="faq" aria-labelledby="fq-h"><div class="wrap">
+  <div style="text-align:center"><span class="eb" style="--c:var(--ghost)"><i></i><span lang="en">Frequently asked questions</span><span lang="ms">Soalan lazim</span></span>
+  <h2 class="split" id="fq-h"><span lang="en">Before you <span class="warm-em">pitch us.</span></span><span lang="ms">Sebelum anda <span class="warm-em">membuat pitch.</span></span></h2></div>
+  <div class="faq"><div class="q"><button type="button" aria-expanded="false" aria-controls="a1" id="q1"><span lang="en">What sectors does Flexcore Venture focus on for investment?</span><span lang="ms">Apakah sektor yang menjadi tumpuan pelaburan Flexcore Venture?</span><i aria-hidden="true"></i></button><div class="a" id="a1" role="region" aria-labelledby="q1"><div><p><span lang="en">Flexcore Venture strategically focuses on a diverse range of sectors to ensure a well-rounded and impactful investment portfolio.</span><span lang="ms">Flexcore Venture memberi tumpuan secara strategik kepada pelbagai sektor untuk memastikan portfolio pelaburan yang seimbang dan berimpak.</span></p><p><span lang="en">Our key sectors include Fintech, Food Security, Real Estate, Healthcare, Islamic Tech Solutions, E-commerce, Agriculture, Automotive, Edtech, Clean Energy, Health Tech, AI (Artificial Intelligence), Industrial, Mining, and the Hospitality Industry.</span><span lang="ms">Sektor utama kami termasuk Fintech, Keselamatan Makanan, Hartanah, Penjagaan Kesihatan, Penyelesaian Teknologi Islam, E-dagang, Pertanian, Automotif, Teknologi Pendidikan, Tenaga Bersih, Teknologi Kesihatan, AI (Kecerdasan Buatan), Perindustrian, Perlombongan dan Industri Hospitaliti.</span></p><p><span lang="en">This comprehensive approach allows us to contribute meaningfully to sectors that are at the forefront of innovation and have a lasting impact on society.</span><span lang="ms">Pendekatan menyeluruh ini membolehkan kami menyumbang secara bermakna kepada sektor yang berada di barisan hadapan inovasi dan memberi kesan berkekalan kepada masyarakat.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a2" id="q2"><span lang="en">How can my startup benefit from Flexcore Venture's expertise?</span><span lang="ms">Bagaimana syarikat permulaan saya boleh mendapat manfaat daripada kepakaran Flexcore Venture?</span><i aria-hidden="true"></i></button><div class="a" id="a2" role="region" aria-labelledby="q2"><div><p><span lang="en">Beyond providing capital, Flexcore Venture extends invaluable mentorship, industry insights, and access to a robust network to catalyse your startup's growth.</span><span lang="ms">Selain modal, Flexcore Venture menawarkan bimbingan yang bernilai, pandangan industri dan akses kepada rangkaian yang kukuh untuk memangkinkan pertumbuhan syarikat permulaan anda.</span></p><p><span lang="en">We are committed to fostering enduring partnerships.</span><span lang="ms">Kami komited membina perkongsian yang berkekalan.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a3" id="q3"><span lang="en">What sets Flexcore Venture apart from other venture capital firms?</span><span lang="ms">Apakah yang membezakan Flexcore Venture daripada firma modal teroka lain?</span><i aria-hidden="true"></i></button><div class="a" id="a3" role="region" aria-labelledby="q3"><div><p><span lang="en">Flexcore Venture distinguishes itself through its hands-on approach, industry-focused investments, and a proven track record of successful ventures. We prioritise real-world businesses and actively engage with our portfolio companies.</span><span lang="ms">Flexcore Venture menonjol melalui pendekatan secara langsung, pelaburan berfokuskan industri dan rekod usaha niaga yang berjaya. Kami mengutamakan perniagaan dunia sebenar dan terlibat secara aktif dengan syarikat portfolio kami.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a4" id="q4"><span lang="en">Does Flexcore Venture only invest in established startups?</span><span lang="ms">Adakah Flexcore Venture hanya melabur dalam syarikat permulaan yang sudah mantap?</span><i aria-hidden="true"></i></button><div class="a" id="a4" role="region" aria-labelledby="q4"><div><p><span lang="en">While we value a proven track record, Flexcore Venture is open to groundbreaking ideas, even at the early stages.</span><span lang="ms">Walaupun kami menghargai rekod prestasi yang terbukti, Flexcore Venture terbuka kepada idea yang inovatif, walaupun di peringkat awal.</span></p><p><span lang="en">We are particularly interested in startups with the potential to disrupt industries and evolve into future unicorns.</span><span lang="ms">Kami amat berminat dengan syarikat permulaan yang berpotensi mengubah industri dan berkembang menjadi unicorn masa depan.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a5" id="q5"><span lang="en">How does the investment process with Flexcore Venture work?</span><span lang="ms">Bagaimanakah proses pelaburan dengan Flexcore Venture berjalan?</span><i aria-hidden="true"></i></button><div class="a" id="a5" role="region" aria-labelledby="q5"><div><p><span lang="en">The process begins with a meticulous evaluation of your business proposal. If your venture aligns with our focus areas, we proceed with due diligence, negotiations, and eventual investment.</span><span lang="ms">Proses bermula dengan penilaian teliti terhadap cadangan perniagaan anda. Jika usaha niaga anda selari dengan bidang tumpuan kami, kami meneruskan dengan usaha wajar (due diligence), rundingan dan akhirnya pelaburan.</span></p><p><span lang="en">Our team is dedicated to facilitating a seamless and transparent process.</span><span lang="ms">Pasukan kami komited memastikan proses yang lancar dan telus.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a6" id="q6"><span lang="en">Can Flexcore Venture provide insights on market trends and industry dynamics?</span><span lang="ms">Bolehkah Flexcore Venture berkongsi pandangan tentang trend pasaran dan dinamik industri?</span><i aria-hidden="true"></i></button><div class="a" id="a6" role="region" aria-labelledby="q6"><div><p><span lang="en">Absolutely. Flexcore Venture is committed to sharing market insights, trends, and industry knowledge with our portfolio companies. We believe that informed decision-making is crucial for sustained success.</span><span lang="ms">Sudah tentu. Flexcore Venture komited berkongsi pandangan pasaran, trend dan pengetahuan industri dengan syarikat portfolio kami. Kami percaya keputusan yang bermaklumat penting untuk kejayaan yang berterusan.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a7" id="q7"><span lang="en">What role does Flexcore Venture play after the investment is made?</span><span lang="ms">Apakah peranan Flexcore Venture selepas pelaburan dibuat?</span><i aria-hidden="true"></i></button><div class="a" id="a7" role="region" aria-labelledby="q7"><div><p><span lang="en">Beyond capital infusion, Flexcore Venture actively engages with portfolio companies, offering strategic guidance, mentorship, and facilitating networking opportunities. We are committed to being a true partner in your journey, not just a financial investor.</span><span lang="ms">Selain suntikan modal, Flexcore Venture terlibat secara aktif dengan syarikat portfolio, memberikan panduan strategik, bimbingan dan peluang rangkaian. Kami komited menjadi rakan sebenar dalam perjalanan anda, bukan sekadar pelabur kewangan.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a8" id="q8"><span lang="en">Is Flexcore Venture interested in socially impactful startups?</span><span lang="ms">Adakah Flexcore Venture berminat dengan syarikat permulaan yang berimpak sosial?</span><i aria-hidden="true"></i></button><div class="a" id="a8" role="region" aria-labelledby="q8"><div><p><span lang="en">Yes, social impact is a pivotal consideration for us. We actively seek startups with innovative solutions that contribute positively to society, aligning with our commitment to responsible and sustainable investments.</span><span lang="ms">Ya, impak sosial ialah pertimbangan utama bagi kami. Kami giat mencari syarikat permulaan dengan penyelesaian inovatif yang menyumbang secara positif kepada masyarakat, selaras dengan komitmen kami terhadap pelaburan yang bertanggungjawab dan lestari.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a9" id="q9"><span lang="en">How does Flexcore Venture assess the potential of a startup?</span><span lang="ms">Bagaimanakah Flexcore Venture menilai potensi sesebuah syarikat permulaan?</span><i aria-hidden="true"></i></button><div class="a" id="a9" role="region" aria-labelledby="q9"><div><p><span lang="en">We assess startups based on their business model, market potential, team strength, scalability, and alignment with our investment focus. We look for ventures that demonstrate innovation, viability, and the potential for significant growth.</span><span lang="ms">Kami menilai syarikat permulaan berdasarkan model perniagaan, potensi pasaran, kekuatan pasukan, keupayaan untuk berkembang dan keselarasan dengan fokus pelaburan kami. Kami mencari usaha niaga yang menunjukkan inovasi, daya maju dan potensi pertumbuhan yang ketara.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a10" id="q10"><span lang="en">Does Flexcore Venture provide support beyond financial assistance?</span><span lang="ms">Adakah Flexcore Venture memberikan sokongan selain bantuan kewangan?</span><i aria-hidden="true"></i></button><div class="a" id="a10" role="region" aria-labelledby="q10"><div><p><span lang="en">Absolutely. Flexcore Venture believes in holistic support. In addition to financial assistance, we offer mentorship, access to our network of industry experts, and various resources to help your startup overcome challenges and thrive in a competitive landscape.</span><span lang="ms">Sudah tentu. Flexcore Venture percaya kepada sokongan menyeluruh. Selain bantuan kewangan, kami menawarkan bimbingan, akses kepada rangkaian pakar industri kami dan pelbagai sumber untuk membantu syarikat permulaan anda mengatasi cabaran dan berjaya dalam persaingan.</span></p></div></div></div><div class="q"><button type="button" aria-expanded="false" aria-controls="a11" id="q11"><span lang="en">Is Flexcore Venture open to investing in Dakwah-focused startups?</span><span lang="ms">Adakah Flexcore Venture terbuka untuk melabur dalam syarikat permulaan berfokuskan dakwah?</span><i aria-hidden="true"></i></button><div class="a" id="a11" role="region" aria-labelledby="q11"><div><p><span lang="en">Yes, Flexcore Venture is deeply committed to supporting Dakwah initiatives. We prioritise ventures that contribute to the betterment of Islam and society.</span><span lang="ms">Ya, Flexcore Venture amat komited menyokong inisiatif dakwah. Kami mengutamakan usaha niaga yang menyumbang kepada kebaikan Islam dan masyarakat.</span></p><p><span lang="en">We have established partnerships with key players in the Dakwah sector and actively seek startups with innovative business models aligning with our mission of building a strong Muslim community.</span><span lang="ms">Kami telah menjalin perkongsian dengan pemain utama dalam sektor dakwah dan giat mencari syarikat permulaan dengan model perniagaan inovatif yang selaras dengan misi kami membina komuniti Muslim yang kukuh.</span></p><p><span lang="en">Our long-term vision includes the creation of a dedicated Dakwah centre, reflecting our sincere dedication to contributing to the growth and well-being of the Muslim ummah.</span><span lang="ms">Visi jangka panjang kami termasuk penubuhan pusat dakwah khusus, mencerminkan dedikasi ikhlas kami untuk menyumbang kepada pertumbuhan dan kesejahteraan ummah.</span></p></div></div></div></div>
+</div></section>
+<section class="contact" id="contact" aria-labelledby="ct-h"><div class="wrap ct-grid">
+  <div><span class="eb"><i></i><span lang="en">Let's connect</span><span lang="ms">Hubungi kami</span></span>
+  <h2 class="split" id="ct-h"><span lang="en">Have an idea worth building? <span class="warm-em">Let’s talk.</span></span><span lang="ms">Ada idea yang wajar dibina? <span class="warm-em">Mari berbincang.</span></span></h2>
+  <p class="lead"><span lang="en">Tell us about your business or your idea. We read every message.</span><span lang="ms">Ceritakan tentang perniagaan atau idea anda. Kami membaca setiap mesej.</span></p>
+  <p class="mail"><span lang="en">Or email us at</span><span lang="ms">Atau e-mel kami di</span> <a href="mailto:flexcoreventure@gmail.com">flexcoreventure@gmail.com</a></p></div>
+  <form class="cform" id="cform" novalidate>
+    <label for="cName"><span lang="en">Name</span><span lang="ms">Nama</span> <em><span lang="en">(required)</span><span lang="ms">(wajib)</span></em></label><input id="cName" name="name" type="text" maxlength="120" autocomplete="name" required placeholder="Your name" data-i18a="placeholder" data-en-placeholder="Your name" data-ms-placeholder="Nama anda">
+    <label for="cEmail"><span lang="en">Email</span><span lang="ms">E-mel</span> <em><span lang="en">(required)</span><span lang="ms">(wajib)</span></em></label><input id="cEmail" name="email" type="email" maxlength="254" autocomplete="email" required placeholder="name@email.com">
+    <label for="cMsg"><span lang="en">Message</span><span lang="ms">Mesej</span></label><textarea id="cMsg" name="message" maxlength="5000" rows="5" placeholder="Type your message here" data-i18a="placeholder" data-en-placeholder="Type your message here" data-ms-placeholder="Tulis mesej anda di sini"></textarea>
+    <input class="hp" id="cWeb" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn pri mag" type="submit" id="cSend"><span lang="en">Send message</span><span lang="ms">Hantar mesej</span> <span class="arr">→</span></button>
+    <p class="cstat" id="cStat" role="status" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div class="foot-links"><a class="l" href="#portfolio"><span lang="en">Portfolio</span><span lang="ms">Portfolio</span></a><a class="l" href="#journey"><span lang="en">Our journey</span><span lang="ms">Perjalanan kami</span></a><a class="l" href="#team"><span lang="en">Our team</span><span lang="ms">Pasukan kami</span></a><a class="l" href="#faq"><span lang="en">FAQ</span><span lang="ms">Soalan lazim</span></a><a class="l" href="#contact"><span lang="en">Let's connect</span><span lang="ms">Hubungi kami</span></a><a href="https://aiboleh.ai/">A.I. Boleh ↗</a></div>
+  <div class="foot-links soc"><a href="https://www.instagram.com/flexcoreventure/" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/flexcoreventure" target="_blank" rel="noopener">X</a><a href="https://www.facebook.com/profile.php?id=61561341516864" target="_blank" rel="noopener">Facebook</a><a href="mailto:flexcoreventure@gmail.com">flexcoreventure@gmail.com</a></div>
+  <div class="legal">Flexcore Venture Sdn. Bhd. (1525349-K | 202301031426) · © 2026 Flexcore Venture</div>
+  <div class="giant" aria-hidden="true">Flexcore <em>Venture</em></div>
+</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script>window.AIB_LOGO_SRC='/assets/logos/fv-mark-white.png';window.AIB_LOGO_SIDE=0xCFE6F7;window.AIB_LOGO_SIDE_GLOW=0x1B4F7A;</script>
+<script>/* ---------- 3D A.I. Boleh logo: the 2D logo is traced, extruded and lit right in the browser ---------- */
+(function(){
+const RMq=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const SRC=window.AIB_LOGO_SRC||'/assets/aiboleh-logo.webp';
+let built=null;
+/* marching squares over the logo's alpha -> closed outline loops (pixel units) */
+function trace(cv,thr){
+  const W=cv.width,H=cv.height,d=cv.getContext('2d').getImageData(0,0,W,H).data;
+  const on=(x,y)=>x>=0&&y>=0&&x<W&&y<H&&d[(y*W+x)*4+3]>thr?1:0;
+  const nb=new Map(),pt=new Map(),K=(X,Y)=>(Y+4)*100000+(X+4);
+  const link=(a,b)=>{const ka=K(a[0],a[1]),kb=K(b[0],b[1]);pt.set(ka,[a[0]/2,a[1]/2]);pt.set(kb,[b[0]/2,b[1]/2]);
+    (nb.get(ka)||nb.set(ka,[]).get(ka)).push(kb);(nb.get(kb)||nb.set(kb,[]).get(kb)).push(ka);};
+  for(let y=-1;y<H;y++)for(let x=-1;x<W;x++){
+    const c=on(x,y)*8+on(x+1,y)*4+on(x+1,y+1)*2+on(x,y+1);if(c===0||c===15)continue;
+    const X=2*x,Y=2*y,T=[X+1,Y],R=[X+2,Y+1],B=[X+1,Y+2],L=[X,Y+1];
+    switch(c){case 1:link(L,B);break;case 2:link(B,R);break;case 3:link(L,R);break;case 4:link(T,R);break;case 5:link(T,R);link(L,B);break;
+      case 6:link(T,B);break;case 7:link(T,L);break;case 8:link(T,L);break;case 9:link(T,B);break;case 10:link(T,L);link(R,B);break;
+      case 11:link(T,R);break;case 12:link(L,R);break;case 13:link(R,B);break;case 14:link(L,B);break;}}
+  const seen=new Set(),loops=[];
+  for(const k of nb.keys()){if(seen.has(k))continue;const loop=[];let prev=null,cur=k;
+    while(cur!==undefined&&!seen.has(cur)){seen.add(cur);loop.push(pt.get(cur));const n=nb.get(cur);const nx=n[0]!==prev?n[0]:n[1];prev=cur;cur=nx;}
+    if(loop.length>10)loops.push(loop);}
+  return loops;}
+function rdpOpen(p,eps){const keep=new Uint8Array(p.length);keep[0]=keep[p.length-1]=1;const st=[[0,p.length-1]];
+  while(st.length){const [a,b]=st.pop();let md=0,mi=-1;const [ax,ay]=p[a],[bx,by]=p[b],dx=bx-ax,dy=by-ay,L=Math.hypot(dx,dy)||1;
+    for(let i=a+1;i<b;i++){const dd=Math.abs(dy*(p[i][0]-ax)-dx*(p[i][1]-ay))/L;if(dd>md){md=dd;mi=i;}}
+    if(md>eps){keep[mi]=1;st.push([a,mi],[mi,b]);}}
+  return p.filter((_,i)=>keep[i]);}
+const simplify=(l,eps)=>{const h=l.length>>1;return rdpOpen(l.slice(0,h+1),eps).slice(0,-1).concat(rdpOpen(l.slice(h).concat([l[0]]),eps).slice(0,-1));};
+const area=l=>{let s=0;for(let i=0,j=l.length-1;i<l.length;j=i++)s+=(l[j][0]+l[i][0])*(l[j][1]-l[i][1]);return s/2;};
+const inside=(p,l)=>{let c=false;for(let i=0,j=l.length-1;i<l.length;j=i++){const [xi,yi]=l[i],[xj,yj]=l[j];if(((yi>p[1])!==(yj>p[1]))&&(p[0]<(xj-xi)*(p[1]-yi)/(yj-yi)+xi))c=!c;}return c;};
+function shapes(loops,toW){
+  const L=loops.map(l=>({l,a:Math.abs(area(l))})).filter(o=>o.a>5);
+  L.forEach(o=>{o.depth=L.filter(q=>q!==o&&q.a>o.a&&inside(o.l[0],q.l)).length;});
+  const outers=L.filter(o=>o.depth%2===0);outers.forEach(o=>{o.shape=new THREE.Shape(o.l.map(toW));});
+  L.filter(o=>o.depth%2===1).forEach(h=>{const par=outers.filter(o=>o.depth===h.depth-1&&o.a>h.a&&inside(h.l[0],o.l)).sort((x,y)=>x.a-y.a)[0];if(par)par.shape.holes.push(new THREE.Path(h.l.map(toW)));});
+  return outers.map(o=>o.shape);}
+function build(){
+  if(built)return built;
+  built=new Promise((res,rej)=>{const img=new Image();img.onload=()=>{
+    const TW=320,TH=Math.round(img.height*TW/img.width),cv=document.createElement('canvas');cv.width=TW;cv.height=TH;cv.getContext('2d').drawImage(img,0,0,TW,TH);
+    const loops=trace(cv,96).map(l=>simplify(l,.65));
+    const WW=2,s=WW/TW,HH=TH*s,toW=p=>new THREE.Vector2((p[0]-TW/2)*s,-(p[1]-TH/2)*s);
+    const depth=.2,uv={generateTopUV(g,v,a,b,c){const f=i=>new THREE.Vector2(v[i*3]/WW+.5,v[i*3+1]/HH+.5);return[f(a),f(b),f(c)];},
+      generateSideWallUV(){return[new THREE.Vector2(),new THREE.Vector2(),new THREE.Vector2(),new THREE.Vector2()];}};
+    const geo=new THREE.ExtrudeGeometry(shapes(loops,toW),{depth,bevelEnabled:true,bevelThickness:.03,bevelSize:.014,bevelSegments:2,curveSegments:1,UVGenerator:uv});
+    geo.translate(0,0,-depth/2);
+    const tex=new THREE.Texture(img);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=8;tex.needsUpdate=true;
+    res({geo,tex,w:WW,h:HH});};img.onerror=rej;img.src=SRC;});
+  return built;}
+const C=hex=>new THREE.Color(hex);
+function mount(canvas){
+  const kind=canvas.dataset.logo3d,tower=kind==='core',sign=kind==='sign';
+  let r;try{r=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});}catch(e){return null;}
+  r.setPixelRatio(Math.min(devicePixelRatio||1,2));r.outputColorSpace=THREE.SRGBColorSpace;r.toneMapping=THREE.NoToneMapping;
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(26,1,.1,80);
+  scene.add(new THREE.AmbientLight(0xffffff,.55));
+  const key=new THREE.DirectionalLight(0xfff0d8,1.9);key.position.set(2.4,3,4.5);scene.add(key);
+  const rim=new THREE.DirectionalLight(0x4FD1BD,2.2);rim.position.set(-3.5,1.4,-3);scene.add(rim);
+  const under=new THREE.PointLight(0xFFA24D,tower?14:6,8,2);under.position.set(0,tower?-.2:-1.1,1.6);scene.add(under);
+  const grp=new THREE.Group();scene.add(grp);
+  const T={glass:null,ribs:[],rings:[],cur:C(0x4FD1BD),want:C(0x4FD1BD)};
+  if(tower){
+    const tw=new THREE.Group();tw.position.y=-1.3;scene.add(tw);
+    T.glass=new THREE.Mesh(new THREE.CylinderGeometry(.6,.68,1.25,64,1,true),new THREE.MeshStandardMaterial({color:0x1d6f66,emissive:0x0d4f48,emissiveIntensity:1,transparent:true,opacity:.42,roughness:.1,metalness:.5,side:THREE.DoubleSide,depthWrite:false}));tw.add(T.glass);
+    const core=new THREE.Mesh(new THREE.CylinderGeometry(.3,.34,1.2,40,1,true),new THREE.MeshBasicMaterial({color:0xFFB066,transparent:true,opacity:.22,side:THREE.DoubleSide,depthWrite:false}));tw.add(core);
+    for(let f=0;f<6;f++){const fl=new THREE.Mesh(new THREE.CylinderGeometry(.59,.59,.006,64,1,true),new THREE.MeshBasicMaterial({color:0xFFD9A8,transparent:true,opacity:.18+.05*(f%2),side:THREE.DoubleSide,depthWrite:false}));fl.position.y=-.5+f*.2;tw.add(fl);}
+    for(let i=0;i<16;i++){const a=i/16*Math.PI*2,rib=new THREE.Mesh(new THREE.BoxGeometry(.01,1.25,.01),new THREE.MeshBasicMaterial({color:0x7FF5E3}));rib.position.set(Math.cos(a)*.645,0,Math.sin(a)*.645);rib.rotation.z=0;tw.add(rib);T.ribs.push(rib);}
+    [.62,.1,-.4].forEach((y,k)=>{const ring=new THREE.Mesh(new THREE.TorusGeometry(k?.655:.66,k?.009:.022,8,96),new THREE.MeshBasicMaterial({color:k?0x7FF5E3:0xFFE2BE}));ring.rotation.x=Math.PI/2;ring.position.y=y;tw.add(ring);T.rings.push(ring);});
+    const plate=new THREE.Mesh(new THREE.CylinderGeometry(.68,.68,.05,64),new THREE.MeshStandardMaterial({color:0x1b2230,emissive:0x2a1406,roughness:.4,metalness:.6}));plate.position.y=.64;tw.add(plate);
+  }
+  let mesh=null,ang=tower?-.5:-.35,vis=true,last=performance.now();
+  /* one slow, steady spin (Zharif, 17 Oct 2026): scrolling, hover, drag, taps and double-clicks no longer change it */
+  const base=RMq?0:.5;   // rad/s, about 12.6 s per turn; reduced-motion users get a still logo
+  function fit(){const w=canvas.clientWidth||1,h=canvas.clientHeight||1;r.setSize(w,h,false);cam.aspect=w/h;
+    const t=Math.tan(cam.fov*Math.PI/360),cy=tower?-.5:0,hh=tower?2.75:1.32,ww=tower?2.1:2.06;
+    const D=Math.max(hh*(tower?1.08:1.2)/(2*t),ww*(tower?1.06:1.14)/(2*t*cam.aspect));cam.position.set(0,cy+(tower?.42:.06),D);cam.lookAt(0,cy,0);cam.updateProjectionMatrix();}
+  new ResizeObserver(fit).observe(canvas);fit();
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting;},{threshold:0}).observe(canvas);
+  build().then(b=>{
+    const cap=new THREE.MeshStandardMaterial({map:b.tex,emissive:0xffffff,emissiveMap:b.tex,emissiveIntensity:.62,roughness:.34,metalness:.05});
+    const side=new THREE.MeshStandardMaterial({color:window.AIB_LOGO_SIDE||0xA8300A,emissive:window.AIB_LOGO_SIDE_GLOW||0x3a0c02,roughness:.36,metalness:.5});   /* a page can recolour the extruded sides (flexcoreventure.com uses blue) */
+    mesh=new THREE.Mesh(b.geo,[cap,side]);grp.add(mesh);canvas.classList.add('ready');
+  }).catch(()=>{});
+  let shown=false;
+  function frame(now){requestAnimationFrame(frame);if(!vis||!mesh||(window.AIB_LITE&&shown))return;shown=true;const dt=Math.min(.05,(now-last)/1000);last=now;
+    ang+=base*dt;
+    const da=((ang%(Math.PI*2))+Math.PI*2)%(Math.PI*2);grp.rotation.y=da>Math.PI/2&&da<Math.PI*1.5?ang+Math.PI:ang;grp.rotation.x=Math.sin(now/1900)*.06+(tower?-.04:0);grp.position.y=Math.sin(now/1100)*(tower?.05:.025);
+    T.cur.lerp(T.want,Math.min(1,dt*3));rim.color.copy(T.cur);
+    if(tower){T.glass.material.color.copy(T.cur);T.glass.material.emissive.copy(T.cur).multiplyScalar(.28);
+      T.ribs.forEach(m=>m.material.color.copy(T.cur).lerp(C(0xffffff),.35));T.rings.slice(1).forEach(m=>m.material.color.copy(T.cur).lerp(C(0xffffff),.35));}
+    r.render(scene,cam);}
+  requestAnimationFrame(t=>{last=t;frame(t);});
+  /* spin() and face() stay as no-ops so older page code calling them keeps working; only the rim colour (tint) reacts */
+  return {tint:hex=>{T.want.set(hex);},spin:()=>{},face:()=>{}};}
+window.AIB3D={init(){if(!window.THREE)return;document.querySelectorAll('canvas[data-logo3d]').forEach(c=>{const m=mount(c);if(m)c.__logo=m;});}};
+AIB3D.init();
+})();</script>
+<script>/* Shared BM/EN switch for the three A.I. Boleh pages.
+   Markup: text in both languages sits side by side, <span lang="en">…</span><span lang="ms">…</span>, and CSS shows one
+   (html[data-lang]). Attributes that change with the language: data-i18a="placeholder,aria-label" plus
+   data-en-<attr> / data-ms-<attr>. The toggle is any .lang group with <button data-l="en|ms">.
+   JS strings: AIBLang.t('English', 'Malay'). Pages re-render dynamic text on the 'langchange' event.
+   The choice is remembered (localStorage aib-lang), so on the live site it carries across the three pages. */
+(function(){
+  const KEY='aib-lang',root=document.documentElement;
+  const get=()=>root.dataset.lang==='ms'?'ms':'en';
+  function apply(l){
+    root.dataset.lang=l;root.lang=l;
+    document.querySelectorAll('[data-i18a]').forEach(el=>el.dataset.i18a.split(',').forEach(a=>{a=a.trim();const v=el.getAttribute('data-'+l+'-'+a);if(v!=null)el.setAttribute(a,v);}));
+    document.querySelectorAll('.lang').forEach(g=>{g.dataset.on=l;g.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===l)));});
+  }
+  window.AIBLang={
+    get,
+    t:(en,ms)=>get()==='ms'?ms:en,
+    set(l){if(l!=='ms'&&l!=='en'||l===get())return;try{localStorage.setItem(KEY,l);}catch(e){}apply(l);dispatchEvent(new CustomEvent('langchange',{detail:l}));}
+  };
+  document.addEventListener('click',e=>{const b=e.target.closest('.lang button');if(b){e.preventDefault();AIBLang.set(b.dataset.l);}});
+  apply(get());
+})();</script>
+<script>/* Keeps the pages light on any PC (Zharif, 16 Oct: "my pc hang ... when I close it my pc just working fine").
+   1. Background tabs: browsers keep decoding muted autoplay video in a hidden tab, so pause every playing video
+      while the tab is hidden and resume exactly those when it comes back.
+   2. Lite mode: when the graphics are struggling (no real graphics card behind WebGL, or frames stalling for
+      3 seconds in a row) set window.AIB_LITE + html.lite and fire "aib-lite". The page loops (light ribbons,
+      3D logos, orbit) check AIB_LITE and stop; decorative muted videos pause. A video the visitor starts
+      with a click or key still plays. */
+(function(){
+  const was = new Set();
+  document.addEventListener('visibilitychange', () => {
+    const vs = document.querySelectorAll('video');
+    if (document.hidden) { vs.forEach(v => { if (!v.paused) { was.add(v); v.pause(); } }); }
+    else { was.forEach(v => { const r = v.getBoundingClientRect(); if (!window.AIB_LITE && r.bottom > 0 && r.top < innerHeight) v.play().catch(() => {}); }); was.clear(); }
+  });
+  let userAt = -1e9;
+  const touch = () => { userAt = performance.now(); };
+  addEventListener('pointerdown', touch, true); addEventListener('keydown', touch, true);
+  /* 3. In-app browsers (TikTok, Instagram, Facebook, Linktree, WhatsApp ...). Ported from ZharifV2's fix on the old home
+     (live since 10 Sep 2026; Zharif, 16 Oct: "the video studio website background video didnt play by itself when people
+     click from linktree"). Their WebView is often built with inline playback OFF: playsinline is IGNORED and the first
+     play() is seized by the native fullscreen player, or nothing plays. So there a muted background video is never
+     started (its poster shows) and the Video Studio hero draws its film another way (see the studio page).
+     MEASURED on the owner's phone 2026-09-10: TikTok's browser claims to be Safari, UA "... Safari/604.1 trill_46.8.0
+     BytedanceWebview/...", it never says "TikTok". Do not trim this list without a UA to justify it.
+     ?ua=1 prints what the browser reports; ?inapp=1 forces this path for testing. */
+  const ua = navigator.userAgent || '';
+  const iOS = /iP(hone|ad|od)/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const named = /(BytedanceWebview|trill_|Aweme|Douyin|TikTok|musical_ly|FBAN|FBAV|FB_IAB|FBIOS|Instagram|Linktree|Line\/|Twitter|Snapchat|Pinterest|WhatsApp|LinkedInApp|MicroMessenger|KAKAOTALK|NAVER|Zalo|GSA\/)/i.test(ua);
+  const noSafari = iOS && !/Safari\//.test(ua);
+  let burned = false; try { burned = localStorage.getItem('aib_no_inline_video') === '1'; } catch (e) {}
+  window.AIB_INAPP = named || noSafari || burned || /[?&]inapp=1/.test(location.search);
+  const noInline = v => v.muted && performance.now() - userAt > 1500;   // a muted video nobody just asked for
+  if (window.AIB_INAPP) {
+    document.documentElement.classList.add('inapp');
+    const play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      if (window.AIB_INAPP && noInline(this)) return Promise.reject(new DOMException('No inline autoplay in this in-app browser', 'NotAllowedError'));
+      return play.apply(this, arguments);
+    };
+    document.querySelectorAll('video').forEach(v => { if (v.muted) { v.removeAttribute('autoplay'); v.autoplay = false; v.preload = 'none'; if (!v.paused) v.pause(); } });
+  }
+  /* Backstop for an in-app browser not on the list: if the native player ever seizes a muted video, cancel it,
+     remember it on this device (never autoplay here again) and tell the page ("aib-inapp"). */
+  document.addEventListener('webkitbeginfullscreen', e => {
+    const v = e.target; if (!v || !v.muted) return;
+    try { if (v.webkitExitFullscreen) v.webkitExitFullscreen(); } catch (x) {}
+    try { v.pause(); } catch (x) {}
+    try { localStorage.setItem('aib_no_inline_video', '1'); } catch (x) {}
+    if (!window.AIB_INAPP) { window.AIB_INAPP = true; document.documentElement.classList.add('inapp'); dispatchEvent(new Event('aib-inapp')); }
+  }, true);
+  if (/[?&]ua=1/.test(location.search)) addEventListener('DOMContentLoaded', () => {
+    const d = document.createElement('div');
+    d.style.cssText = 'position:fixed;left:8px;right:8px;bottom:8px;z-index:99999;background:#000;color:#0f0;font:12px/1.5 monospace;padding:10px;border:1px solid #0f0;word-break:break-all;border-radius:8px;pointer-events:none';
+    document.body.appendChild(d);
+    setInterval(() => { d.textContent = 'inApp=' + window.AIB_INAPP + ' | named=' + named + ' | iOS=' + iOS + ' | noSafari=' + noSafari + ' | burned=' + burned +
+      ' | lite=' + (window.AIB_LITE || false) + ' | hero=' + (window.__heroMode ? window.__heroMode() : 'n/a') + '\nUA: ' + ua; }, 500);
+  });
+  /* in lite mode a muted video may only play right after the visitor asked for it */
+  document.addEventListener('play', e => { const v = e.target;
+    if (window.AIB_LITE && v.muted && performance.now() - userAt > 1500) v.pause(); }, true);
+  function lite(why){
+    if (window.AIB_LITE) return; window.AIB_LITE = why;
+    document.documentElement.classList.add('lite');
+    document.querySelectorAll('video').forEach(v => { if (v.muted && !v.paused) v.pause(); });
+    dispatchEvent(new Event('aib-lite'));
+  }
+  window.AIBLite = lite;
+  /* no real graphics card: WebGL is missing, or drawn on the processor (SwiftShader and friends) */
+  try {
+    const c = document.createElement('canvas'), g = c.getContext('webgl', { failIfMajorPerformanceCaveat: true });
+    if (!g) lite('no-gpu');
+    else {
+      const e = g.getExtension('WEBGL_debug_renderer_info'), r = e ? String(g.getParameter(e.UNMASKED_RENDERER_WEBGL)) : '';
+      if (/swiftshader|llvmpipe|softpipe|software|basic render/i.test(r)) lite('software');
+      const l = g.getExtension('WEBGL_lose_context'); if (l) l.loseContext();
+    }
+  } catch (e) {}
+  /* stalls: frames counted each second while the tab is visible; under 12 for 3 seconds in a row = lite.
+     Counting starts 3 s after load so the first paint and font loading never count. */
+  let n = 0, bad = 0;
+  const count = () => { n++; if (!window.AIB_LITE) requestAnimationFrame(count); };
+  addEventListener('load', () => setTimeout(() => {
+    requestAnimationFrame(count);
+    const iv = setInterval(() => {
+      if (window.AIB_LITE) { clearInterval(iv); return; }
+      if (document.hidden) { n = 0; bad = 0; return; }
+      bad = n < 12 ? bad + 1 : 0; n = 0;
+      if (bad >= 3) lite('slow');
+    }, 1000);
+  }, 3000));
+})();</script>
+<script>window.FV_API="https://api.aiboleh.ai/contact";window.FV_EMAIL="flexcoreventure@gmail.com";
+/* flexcoreventure.com page script: the aiboleh.ai v3 main-page behaviour (shader, cursor, nav, split headings,
+   reveals, smooth scroll) plus the FAQ accordion and the contact form. The page is complete without GSAP/Lenis. */
+(function(){
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches, FINE=matchMedia('(pointer:fine)').matches;
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const T=(en,ms)=>window.AIBLang?AIBLang.t(en,ms):en;
+const TITLE=['Flexcore Venture | Empowering Visionaries, Fuelling Growth','Flexcore Venture | Memperkasa Insan Berwawasan, Memacu Pertumbuhan'];
+document.title=T(TITLE[0],TITLE[1]);
+
+/* ---------- light-ribbon shader (same as aiboleh.ai) ---------- */
+(function(){
+  const c=$('#fx'), gl=c&&c.getContext('webgl',{antialias:false}); if(!gl) return;
+  const vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  const fs=`precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;
+  float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+  float n(vec2 p){vec2 i=floor(p),f=fract(p),u=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),u.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),u.x),u.y);}
+  float fb(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p*=2.03;a*=.5;}return v;}
+  void main(){vec2 uv=(gl_FragCoord.xy-.5*r)/r.y;vec3 col=mix(vec3(0.,.33,.56),vec3(0.,.46,.74),.5+.5*uv.y);
+    /* Flexcore chevrons: rows of V shapes (the logo's mark) drifting up, with a slow light sweep and a soft network glow */
+    vec2 q=uv*vec2(1.,1.)+vec2(0.,t*.025);
+    float k=5.5;vec2 g=q*k;float cx=fract(g.x)-.5;
+    float v=g.y+abs(cx)*1.15;float line=abs(fract(v)-.5);
+    float w=.018+.012*sin(t*.4+floor(g.x)*1.7);
+    float chev=smoothstep(w+.02,w,line)*(.35+.65*n(floor(g)+vec2(floor(v),0.)+t*.05));
+    float sweep=exp(-pow((uv.x+uv.y*.6)-(mod(t*.12,3.2)-1.6),2.)*6.);
+    col+=vec3(.8,.93,1.)*chev*(.07+.22*sweep);
+    float dots=smoothstep(.09,.0,length(vec2(cx,fract(v)-.5)))*.25*fb(q*2.+t*.03);
+    col+=vec3(1.)*dots*.35;
+    vec2 mp=(m-.5*r)/r.y;col+=vec3(.75,.9,1.)*exp(-length(uv-mp)*3.)*.12;
+    col*=1.-.30*smoothstep(.3,1.3,length(uv*vec2(.8,1.)));
+    col+=(h(gl_FragCoord.xy+t)-.5)*.022;gl_FragColor=vec4(col,1.);}`;
+  const sh=(t,s)=>{const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o;};
+  const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);
+  if(!gl.getProgramParameter(pr,gl.LINK_STATUS)) return; gl.useProgram(pr);
+  const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+  let W=0,H=0,mx=0,my=0,tx=0,ty=0,vis=true;
+  function size(){const d=Math.min(devicePixelRatio||1,1.5)*.5;W=c.width=Math.max(2,c.clientWidth*d|0);H=c.height=Math.max(2,c.clientHeight*d|0);gl.viewport(0,0,W,H);tx=mx=W*.7;ty=my=H*.65;}
+  size();addEventListener('resize',size);
+  addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();tx=(e.clientX-r.left)/r.width*W;ty=(1-(e.clientY-r.top)/r.height)*H;});
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting;}).observe(c);
+  const t0=performance.now();
+  function draw(now){mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,W,H);gl.uniform1f(ut,RM?8:(now-t0)/1000);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);}
+  if(RM||window.AIB_LITE){draw(t0);addEventListener('resize',()=>draw(t0));return;}
+  let lastF=0;(function f(now){if(window.AIB_LITE)return;requestAnimationFrame(f);if(vis&&!document.hidden&&now-lastF>=32){lastF=now;draw(now);}})(t0);
+})();
+
+/* ---------- cursor ---------- */
+if(FINE){const cur=$('#cur');let x=-100,y=-100,cx=x,cy=y;
+  addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;cur.style.opacity=1;});
+  (function f(){cx+=(x-cx)*.2;cy+=(y-cy)*.2;cur.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(f);})();}
+
+/* ---------- nav: solid on scroll + current section ---------- */
+const nav=$('#nav');const navf=()=>nav.classList.toggle('solid',scrollY>30);addEventListener('scroll',navf,{passive:true});navf();
+const navLinks=$$('.nav a.l[href^="#"]');
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}),{rootMargin:'-45% 0px -50% 0px'});
+['portfolio','journey','team','faq'].forEach(id=>{const s=document.getElementById(id);if(s)sio.observe(s);});
+
+/* ---------- split headings ---------- */
+function split(el){const walk=n=>{[...n.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(' '));return;}const o=document.createElement('span');o.className='w';const i=document.createElement('span');i.textContent=p;o.appendChild(i);f.appendChild(o);});c.replaceWith(f);}else if(c.nodeType===1)walk(c);});};walk(el);}
+$$('.split').forEach(split);$$('.warm-em .w>span').forEach(s=>s.className='warm-em');
+
+/* ---------- spotlight + FAQ ---------- */
+$$('.spot').forEach(p=>p.addEventListener('pointermove',e=>{const r=p.getBoundingClientRect();p.style.setProperty('--mx',(e.clientX-r.left)+'px');p.style.setProperty('--my',(e.clientY-r.top)+'px');}));
+$$('.q button').forEach(b=>b.addEventListener('click',()=>{const q=b.parentElement,o=!q.classList.contains('open');$$('.q').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false');});if(o){q.classList.add('open');b.setAttribute('aria-expanded','true');}setTimeout(()=>window.ScrollTrigger&&ScrollTrigger.refresh(),650);}));
+
+/* ---------- contact form (POST to api.aiboleh.ai/contact; the message reaches Zharif on Telegram) ---------- */
+const form=$('#cform'),stat=$('#cStat'),send=$('#cSend');
+const say=(cls,en,ms)=>{stat.className='cstat '+cls;stat.textContent=T(en,ms);stat.dataset.en=en;stat.dataset.ms=ms;};
+form.addEventListener('submit',async e=>{e.preventDefault();
+  const name=$('#cName').value.trim(),email=$('#cEmail').value.trim(),message=$('#cMsg').value.trim();
+  if(!name){say('err','Please enter your name.','Sila masukkan nama anda.');$('#cName').focus();return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){say('err','Please enter a valid email address.','Sila masukkan alamat e-mel yang sah.');$('#cEmail').focus();return;}
+  send.disabled=true;say('','Sending…','Sedang dihantar…');
+  try{const r=await fetch(window.FV_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,message,website:$('#cWeb').value,lang:document.documentElement.lang||'en'})});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok&&j.ok){form.reset();say('ok','Thank you! Your message has been received.','Terima kasih! Mesej anda telah diterima.');}
+    else if(r.status===429){say('err','Too many messages from here. Please try again later, or email '+window.FV_EMAIL+'.','Terlalu banyak mesej dari sini. Cuba lagi nanti, atau e-mel '+window.FV_EMAIL+'.');}
+    else{say('err','Something went wrong. Please email us at '+window.FV_EMAIL+'.','Ada masalah. Sila e-mel kami di '+window.FV_EMAIL+'.');}
+  }catch(err){say('err','Something went wrong. Please email us at '+window.FV_EMAIL+'.','Ada masalah. Sila e-mel kami di '+window.FV_EMAIL+'.');}
+  send.disabled=false;});
+addEventListener('langchange',()=>{document.title=T(TITLE[0],TITLE[1]);if(stat.dataset.en)stat.textContent=T(stat.dataset.en,stat.dataset.ms);});
+
+/* ---------- optional motion (GSAP + Lenis) ---------- */
+if(!window.gsap||RM)return;
+gsap.registerPlugin(ScrollTrigger);
+if(window.Lenis){const lenis=new Lenis({lerp:.085,smoothWheel:true});window.__lenis=lenis;lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+  $$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1&&$(id)){e.preventDefault();lenis.scrollTo(id,{duration:1.5,offset:-46});}}));}
+if(FINE)$$('.mag').forEach(b=>{const qx=gsap.quickTo(b,'x',{duration:.6,ease:'power3'}),qy=gsap.quickTo(b,'y',{duration:.6,ease:'power3'});
+  b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();qx((e.clientX-r.left-r.width/2)*.2);qy((e.clientY-r.top-r.height/2)*.3);});b.addEventListener('pointerleave',()=>{qx(0);qy(0);});});
+const wordSets=h=>{const g=[...h.children].filter(c=>c.hasAttribute('lang'));return (g.length?g:[h]).map(x=>x.querySelectorAll('.w>span'));};
+const intro=gsap.timeline({defaults:{ease:'expo.out'}});
+wordSets($('.hero h1')).forEach((w,i)=>intro.from(w,{yPercent:150,duration:1.3,stagger:.045},i?'<':undefined));
+intro.from('.hero .rev',{y:18,opacity:0,duration:1,stagger:.1},'<.2');
+const onView=(els,set,play,m)=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);play(e.target);}),{rootMargin:'0px 0px '+(m||'-6%')+' 0px'});
+  els.forEach(el=>{if(el.getBoundingClientRect().top<innerHeight*.95)return;set(el);io.observe(el);});};
+onView($$('main section:not(.hero) .split'),h=>{h.__w=wordSets(h);h.__w.forEach(w=>gsap.set(w,{yPercent:150}));},h=>h.__w.forEach(w=>gsap.to(w,{yPercent:0,duration:1.2,ease:'expo.out',stagger:.04})),'-12%');
+onView(gsap.utils.toArray('.mv-card,.pco,.sec-card,.xs,.tl,.person,.cform,.q'),el=>gsap.set(el,{y:36,opacity:0}),el=>gsap.to(el,{y:0,opacity:1,duration:1.05,ease:'expo.out'}));
+gsap.to('.band-img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.band',start:'top bottom',end:'bottom top',scrub:true}});
+addEventListener('load',()=>ScrollTrigger.refresh());
+addEventListener('langchange',()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
